@@ -7,5 +7,5 @@ const PORT = config.get('PORT') || 3001
 
 
 app.listen(PORT, () => {
-    console.log(`Server is running on PORT ${PORT}`)
+    console.log(`Server is running on PORT ${PORT}.....`)
 })
