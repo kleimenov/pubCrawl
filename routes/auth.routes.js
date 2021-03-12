@@ -6,7 +6,7 @@ const router = Router();
 
 //first auth route is:  /api/auth/register
 router.post('/register', async (req, res) => {
-
+     
 })
 
 //second auth route is:  /api/auth/login
