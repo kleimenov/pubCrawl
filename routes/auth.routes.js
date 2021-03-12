@@ -14,6 +14,14 @@ router.post("/register", async (req, res) => {
       return res.status(400).json({ message: "Current euser already exist" });
     }
     const hashedPassword = await bcrypt.hash(password, 12);
+    const user = new User({
+      name,
+      email,
+      password: hashedPassword,
+      telephone_number,
+    });
+    await user.save();
+    res.status(201).json({ message: "New user was created" });
   } catch (e) {}
 });
 
