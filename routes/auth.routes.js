@@ -4,8 +4,6 @@ const router = Router();
 
 // /api/auth (all next routs will be concatinate with this path)
 
-//console.log(User.schema.obj)
-
 //first auth route is:  /api/auth/register
 router.post("/register", async (req, res) => {
   try {
