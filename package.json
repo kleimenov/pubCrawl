@@ -4,7 +4,8 @@
   "description": "pubCrawl (MERN app) allows users to create specific bars list that they want to visit one night",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "server": "nodemon app.js"
   },
   "keywords": [
     "MERN",
