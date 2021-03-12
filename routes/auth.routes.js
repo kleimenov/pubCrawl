@@ -1,5 +1,5 @@
 const { Roruter, Router } = require("express");
-const bcrypt = require('bcryptjs')
+const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 const router = Router();
 
@@ -13,6 +13,7 @@ router.post("/register", async (req, res) => {
     if (candidate) {
       return res.status(400).json({ message: "Current euser already exist" });
     }
+    const hashedPassword = bcrypt.hash(password, 12);
   } catch (e) {}
 });
 
