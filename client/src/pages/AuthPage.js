@@ -4,7 +4,7 @@ export const AuthPage = () => {
   return (
     <div>
       <div>
-        <h1 className="text-secondary">Short links (Auth page)</h1>
+        <h1 className="text-secondary">Pub Crawl (Auth page)</h1>
         <div className="flex column">
           <span className="h4 text-secondary">Authentication</span>
           <div>
