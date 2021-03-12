@@ -1,4 +1,5 @@
 const { Roruter, Router } = require("express");
+const bcrypt = require('bcryptjs')
 const User = require("../models/User");
 const router = Router();
 
