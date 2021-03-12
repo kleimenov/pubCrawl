@@ -8,6 +8,10 @@ const PORT = config.get("PORT") || 3001;
 
 const start = async () => {
 
+    try {} catch (e) {
+        console.log("Server Error", e.message)
+        process.exit(1)
+    }
 }
 
 start()
