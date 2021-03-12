@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const AuthPage = () => {
+export const CreatePage = () => {
     return (
     <div>
-        <h3>AuthPage</h3>
+        <h3>CreatePage</h3>
     </div>
     )
 }
