@@ -1,7 +1,7 @@
 {
   "name": "pubcrawl",
   "version": "1.0.0",
-  "description": "pubCrawl (MERN app) allows users to create specific bars list that they want to visit one night",
+  "description": "pubCrawl (MERN app) allows user to create specific bars list that they want to visit one night",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
