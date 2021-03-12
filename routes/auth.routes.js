@@ -10,6 +10,10 @@ const router = Router();
 router.post("/register", async (req, res) => {
   try {
     const { name, email, password, telephone_number } = req.body;
+    const candidate = await User.findOne({ email });
+    if (candidate) {
+      return res.status(400).json({ message: "Current euser already exist" });
+    }
   } catch (e) {}
 });
 
