@@ -1,0 +1,17 @@
+{
+  "name": "pubcrawl",
+  "version": "1.0.0",
+  "description": "pubCrawl (MERN app) allows users to create specific bars list that they want to visit one night",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MERN",
+    "React",
+    "Node",
+    "Express"
+  ],
+  "author": "Ivan Kleimenov <i.kleymenov84@gmail.com>",
+  "license": "ISC"
+}
