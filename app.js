@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+//app.use('/api/auth',)
+
 const PORT = config.get("PORT") || 3001;
 
 const start = async () => {
