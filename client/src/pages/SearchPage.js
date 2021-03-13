@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const SearchPage = () => {
-    return (
+  return (
     <div>
-        <h3>SearchPage</h3>
+      <h3>SearchPage</h3>
     </div>
-    )
-}
+  );
+};
