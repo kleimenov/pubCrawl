@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const BarDetailPage = () => {
-    return (
+  return (
     <div>
-        <h3>BarDetailPage</h3>
+      <h3>BarDetailPage</h3>
     </div>
-    )
-}
+  );
+};
