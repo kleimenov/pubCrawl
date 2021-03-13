@@ -14,7 +14,7 @@ export const AuthPage = () => {
               name="email"
               placeholder="Enter your email"
               //value={form.email}
-              //onChange={changeHandler}
+              //onChange={changeHandler}´´
             />
             <label className="ml-2" htmlFor="email">
               Email
