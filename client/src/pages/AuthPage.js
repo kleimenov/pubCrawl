@@ -8,7 +8,7 @@ export const AuthPage = () => {
         <div className="flex column">
           <span className="h4 text-secondary">Authentication</span>
           <div>
-            <input
+            <input 
               id="email"
               type="text"
               name="email"
