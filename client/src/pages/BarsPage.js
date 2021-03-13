@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const BarsPage = () => {
-    return (
+  return (
     <div>
-        <h3>BarsPage</h3>
+      <h3>BarsPage</h3>
     </div>
-    )
-}
+  );
+};
