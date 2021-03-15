@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link, useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 import { RegisterPage } from "./RegisterPage";
@@ -33,11 +33,6 @@ export const AuthPageII = () => {
       auth.login(data.token, data.userId);
       console.log(data);
     } catch (e) {}
-  };
-
-  const aHandler = (event) => {
-    event.preventDefault();
-    history.push("/registration");
   };
 
   return (
@@ -75,7 +70,10 @@ export const AuthPageII = () => {
           >
             Login
           </button>
-          <RegisterPage />
+          <div>
+
+          <Link to="/register">Sign Up</Link>
+          </div>
         </div>
       </div>
     </div>

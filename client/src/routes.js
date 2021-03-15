@@ -30,9 +30,13 @@ export const useRoutes = (isAuthenticated) => {
   }
   return (
     <Switch>
-      <Route to="/" exact>
+      <Route path="/" exact>
         <AuthPageII />
       </Route>
+      <Route path="/register" exact>
+        <RegisterPage />
+      </Route>
+      <Redirect to="/" />
     </Switch>
   );
 };
