@@ -5,6 +5,10 @@ export const AuthPage = () => {
   const [form, setForm] = useState({
     email: '', password: ''
   })
+
+  const changeHandler = (event) => {
+    setForm({...form, [event.target.name]: event.target.value})
+  }
   
 
   return (
@@ -20,7 +24,7 @@ export const AuthPage = () => {
               name="email"
               placeholder="Enter your email"
               //value={form.email}
-              //onChange={changeHandler}´´
+              onChange={changeHandler}
             />
             <label className="ml-2" htmlFor="email">
               Email
@@ -33,7 +37,7 @@ export const AuthPage = () => {
               name="password"
               placeholder="Enter your password"
               //value={form.password}
-              //onChange={changeHandler}
+              onChange={changeHandler}
             />
             <label className="ml-2" htmlFor="first_name">
               Password
