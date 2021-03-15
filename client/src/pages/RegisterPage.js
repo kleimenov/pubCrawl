@@ -27,5 +27,6 @@ export const RegisterPage = () => {
     <div>
       <h3>Hello and please Register</h3>
     </div>
+    
   );
 };
