@@ -50,9 +50,9 @@ export const AuthPageII = () => {
           onChange={changeHandler}
         />
 
-        <div className="d-flex justify-content-between align-items-center w-75">
+        <div className="d-flex justify-content-between align-items-center w-75 mt-2">
           <button
-            className="btn btn-primary text-white p-1"
+            className="btn btn-primary text-white p-0 px-1"
             onClick={loginHandler}
             disabled={loading}
           >
