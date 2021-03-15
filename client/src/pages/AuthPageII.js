@@ -5,7 +5,6 @@ import { useHttp } from "../hooks/http.hook";
 
 export const AuthPageII = () => {
   const auth = useContext(AuthContext);
-  const history = useHistory();
   const { loading, error, request } = useHttp();
 
   const [form, setForm] = useState({
