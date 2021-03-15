@@ -18,13 +18,6 @@ export const AuthPageII = () => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
-  const registrationHandler = async () => {
-    try {
-      const data = await request("/api/auth/register", "POST", { ...form });
-      console.log(data);
-    } catch (e) {}
-  };
-
   const loginHandler = async () => {
     try {
       const data = await request("/api/auth/login", "POST", { ...form });
