@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useCallback} from 'react';
 
 
 
@@ -6,7 +6,7 @@ export const useHttp = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
 
-    const request = () => {}
+    const request = async (url, method="GET", body= null, headers= {}) => {}
 
     return { loading, request }
 }
