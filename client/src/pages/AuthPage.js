@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 
 export const AuthPage = () => {
@@ -8,6 +8,7 @@ export const AuthPage = () => {
     password: "",
   });
 
+  
   const changeHandler = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
