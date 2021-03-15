@@ -50,7 +50,8 @@ router.post(
 router.post(
   "/login",
   [
-    check("email", "Input correct email").normalizeEmail().isEmail(),
+    /*check("email", "Input correct email").normalizeEmail().isEmail(),*/
+    check("email", "Input correct email").isEmail(),
     check("password", "Input correct password").exists(),
   ],
   async (req, res) => {
@@ -67,6 +68,7 @@ router.post(
       const { email, password } = req.body;
 
       const user = await User.findOne({ email });
+      //console.log(user) //get user data OK
 
       if (!user) {
         return res.status(400).json({ message: "User didn't found" });
