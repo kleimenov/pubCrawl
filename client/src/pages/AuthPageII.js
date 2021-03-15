@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
-import { BrowserRouter as Router, Route, Switch, Link, useHistory } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  useHistory,
+} from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
 import { RegisterPage } from "./RegisterPage";
@@ -71,8 +77,7 @@ export const AuthPageII = () => {
             Login
           </button>
           <div>
-
-          <Link to="/register">Sign Up</Link>
+            <Link to="/register">Sign Up</Link>
           </div>
         </div>
       </div>
