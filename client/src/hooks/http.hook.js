@@ -15,10 +15,16 @@ export const useHttp = () => {
         }
         setLoading(false);
         return data;
-      } catch (e) {}
+      } catch (e) {
+        setLoading(false);
+        setError(e.message);
+        throw e;
+      }
     },
     []
   );
 
-  return { loading, request };
+  const clearError = () => setError(null)
+
+  return { loading, request, error, clearError };
 };
