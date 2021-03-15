@@ -7,4 +7,5 @@ export const useHttp = () => {
 
     const request = () => {}
 
+    return { loading, request }
 }
