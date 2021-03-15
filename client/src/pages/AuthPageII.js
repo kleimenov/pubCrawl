@@ -69,11 +69,3 @@ export const AuthPageII = () => {
     </div>
   );
 };
-
-/*
-<Switch>
-              <Link className="ml-1" to="/registration">
-                Sign Up{" "}
-              </Link>
-            </Switch>
-            */
