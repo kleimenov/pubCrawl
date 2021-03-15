@@ -28,41 +28,38 @@ export const AuthPageII = () => {
 
   return (
     <div>
-      <div>
-        <h1 className="text-secondary">pubCrawl</h1>
-        <div className="flex column">
-          <span className="h4 text-secondary">Authentication</span>
-          <div>
-            <input
-              id="email"
-              type="text"
-              name="email"
-              placeholder="Enter your email"
-              value={form.email}
-              onChange={changeHandler}
-            />
-          </div>
-          <div>
-            <input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              value={form.password}
-              onChange={changeHandler}
-            />
-          </div>
-        </div>
-        <div>
+      <h1 className="text-secondary text-center">pubCrawl</h1>
+      <div className="d-flex flex-column align-items-center">
+        <span className="h4 text-secondary">Authentication</span>
+        <input
+          className="w-75 my-1"
+          id="email"
+          type="text"
+          name="email"
+          placeholder="Enter your email"
+          value={form.email}
+          onChange={changeHandler}
+        />
+        <input
+          className="w-75 my-1"
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Enter your password"
+          value={form.password}
+          onChange={changeHandler}
+        />
+
+        <div className="d-flex justify-content-between align-items-center w-75">
           <button
-            className="btn btn-success text-white"
+            className="btn btn-primary text-white p-1"
             onClick={loginHandler}
             disabled={loading}
           >
             Login
           </button>
           <div>
-            <Link to="/register">Sign Up</Link>
+            Don't have an account? <Link to="/register">Sign Up</Link>
           </div>
         </div>
       </div>
