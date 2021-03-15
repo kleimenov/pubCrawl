@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { useHttp } from "../hooks/http.hook";
 
 export const AuthPage = () => {
-
+  const {} = useHttp()
   const [form, setForm] = useState({
     email: '', password: ''
   })
