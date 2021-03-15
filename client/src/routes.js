@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { AuthPage } from "./pages/AuthPage";
+//import { AuthPage } from "./pages/AuthPage";
 import { AuthPageII } from "./pages/AuthPageII";
 import { SearchPage } from "./pages/SearchPage";
 import { CreatePage } from "./pages/CreatePage";
