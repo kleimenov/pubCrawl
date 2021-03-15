@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 
 export const AuthPage = () => {
-  const {} = useHttp()
+  const { loading, error, request } = useHttp();
   const [form, setForm] = useState({
-    email: '', password: ''
-  })
+    email: "",
+    password: "",
+  });
 
   const changeHandler = (event) => {
-    setForm({...form, [event.target.name]: event.target.value})
-  }
-  
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
+
+  const rigisterHandler = async () => {
+    try {
+      const data = await request("/api/auth/register", { ...form });
+    } catch (e) {}
+  };
 
   return (
     <div>
@@ -19,7 +25,7 @@ export const AuthPage = () => {
         <div className="flex column">
           <span className="h4 text-secondary">Authentication</span>
           <div>
-            <input 
+            <input
               id="email"
               type="text"
               name="email"
@@ -55,7 +61,7 @@ export const AuthPage = () => {
           </button>
           <button
             className="btn btn-warning text-white ml-1"
-            //onClick={registrationHandler}
+            //onClick={rigisterHandler}
             //disabled={loading}
           >
             Registration (Don't have an account? Sign Up)
