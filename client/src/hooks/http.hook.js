@@ -12,6 +12,7 @@ export const useHttp = () => {
         if (!response.ok) {
           throw new Error(data.message || "Something went wrong");
         }
+        return data;
       } catch (e) {}
     },
     []
