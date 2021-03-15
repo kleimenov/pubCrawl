@@ -6,7 +6,10 @@ export const useHttp = () => {
 
   const request = useCallback(
     async (url, method = "GET", body = null, headers = {}) => {
-      await fetch(url, { method, body, headers });
+        try {
+            await fetch(url, { method, body, headers });
+
+        } catch (e) {}
     }
   );
 
