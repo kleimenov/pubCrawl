@@ -1,9 +1,12 @@
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { AuthPage } from "./pages/AuthPage";
+import { AuthPageII } from "./pages/AuthPageII";
 import { SearchPage } from "./pages/SearchPage";
 import { CreatePage } from "./pages/CreatePage";
 import { BarDetailPage } from "./pages/BarDetailPage";
+import { BarsPage } from "./pages/BarsPage";
+import {RegisterPage} from './pages/RegisterPage'
 
 export const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
@@ -11,6 +14,9 @@ export const useRoutes = (isAuthenticated) => {
       <Switch>
         <Route path="/search" exact>
           <SearchPage />
+        </Route>
+        <Route path="/barslist" exact>
+          <BarsPage />
         </Route>
         <Route path="/create" exact>
           <CreatePage />
@@ -24,10 +30,9 @@ export const useRoutes = (isAuthenticated) => {
   }
   return (
     <Switch>
-      <Route to="/">
-        <AuthPage />
+      <Route to="/" exact>
+        <AuthPageII />
       </Route>
-      <Redirect to="/" />
     </Switch>
   );
 };

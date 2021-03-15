@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
+import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useHttp } from "../hooks/http.hook";
+import { RegisterPage } from "./RegisterPage";
 
-export const AuthPage = () => {
+export const AuthPageII = () => {
   const auth = useContext(AuthContext);
-
+  const history = useHistory();
   const { loading, error, request } = useHttp();
 
   const [form, setForm] = useState({
@@ -21,7 +23,7 @@ export const AuthPage = () => {
   const registrationHandler = async () => {
     try {
       const data = await request("/api/auth/register", "POST", { ...form });
-      console.log(data)
+      console.log(data);
     } catch (e) {}
   };
 
@@ -29,14 +31,19 @@ export const AuthPage = () => {
     try {
       const data = await request("/api/auth/login", "POST", { ...form });
       auth.login(data.token, data.userId);
-      console.log(data)
+      console.log(data);
     } catch (e) {}
+  };
+
+  const aHandler = (event) => {
+    event.preventDefault();
+    history.push("/registration");
   };
 
   return (
     <div>
       <div>
-        <h1 className="text-secondary">Short links (Auth page)</h1>
+        <h1 className="text-secondary">pubCrawl</h1>
         <div className="flex column">
           <span className="h4 text-secondary">Authentication</span>
           <div>
@@ -48,9 +55,6 @@ export const AuthPage = () => {
               value={form.email}
               onChange={changeHandler}
             />
-            <label className="ml-2" htmlFor="email">
-              Email
-            </label>
           </div>
           <div>
             <input
@@ -61,9 +65,6 @@ export const AuthPage = () => {
               value={form.password}
               onChange={changeHandler}
             />
-            <label className="ml-2" htmlFor="first_name">
-              Password
-            </label>
           </div>
         </div>
         <div>
@@ -74,15 +75,17 @@ export const AuthPage = () => {
           >
             Login
           </button>
-          <button
-            className="btn btn-warning text-white ml-1"
-            onClick={registrationHandler}
-            disabled={loading}
-          >
-            Registration
-          </button>
+          <RegisterPage />
         </div>
       </div>
     </div>
   );
 };
+
+/*
+<Switch>
+              <Link className="ml-1" to="/registration">
+                Sign Up{" "}
+              </Link>
+            </Switch>
+            */

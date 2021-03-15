@@ -17,17 +17,22 @@ export const Navbar = () => {
       <div className="bg-primary">
         <div className="d-flex flex-row justify-content-between px-5 pt-2">
           <a className="text-white" href="/">
-            Cut links
+            pubCrawl
           </a>
           <ul className="d-flex flex-row align-items-center list-unstyled">
+          <li className="mx-2">
+              <NavLink className="text-white" to="/search">
+                Search
+              </NavLink>
+            </li>
             <li className="mx-2">
               <NavLink className="text-white" to="/create">
                 Create
               </NavLink>
             </li>
             <li className="mx-2">
-              <NavLink className="text-white" to="/links">
-                Links
+              <NavLink className="text-white" to="/barslist">
+                Bars list
               </NavLink>
             </li>
             <li className="mx-2">
