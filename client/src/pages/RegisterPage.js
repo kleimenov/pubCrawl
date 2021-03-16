@@ -6,14 +6,19 @@ export const RegisterPage = () => {
   const auth = useContext(AuthContext);
   const { loading, error, request } = useHttp();
 
+  const timeMachine = (currentUnixTime) => {
+    return new Date(currentUnixTime).toUTCString();
+  };
+
   const [form, setForm] = useState({
     name: "",
     email: "",
     password: "",
-    telephone_number: ""
+    telephone_number: "",
+    date: timeMachine(new Date()),
   });
-  
-  console.log(form)
+
+  console.log(form);
 
   useEffect(() => {}, [error]);
 
@@ -31,6 +36,5 @@ export const RegisterPage = () => {
     <div>
       <h3>Hello and please Register</h3>
     </div>
-    
   );
 };
