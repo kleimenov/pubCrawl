@@ -10,6 +10,7 @@ export const RegisterPage = () => {
     email: "",
     password: "",
   });
+  
 
   useEffect(() => {}, [error]);
 
