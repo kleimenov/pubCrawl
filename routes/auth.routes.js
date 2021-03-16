@@ -46,7 +46,9 @@ router.post(
         expiresIn: "1h",
       });
 
-      res.status(201).json({ message: "New user was created", token, userId: user.id });
+      res
+        .status(201)
+        .json({ message: "New user was created", token, userId: user.id });
     } catch (e) {}
   }
 );
