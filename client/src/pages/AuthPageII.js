@@ -10,7 +10,7 @@ export const AuthPageII = () => {
   const [form, setForm] = useState({
     email: "",
     password: "",
-  }); 
+  });
 
   useEffect(() => {}, [error]);
 
