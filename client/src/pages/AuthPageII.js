@@ -27,7 +27,7 @@ export const AuthPageII = () => {
 
   return (
     <div>
-      <h1 className="text-secondary text-center">pubCrawl</h1>
+      <h3 className="text-secondary text-center">pubCrawl</h3>
       <div className="d-flex flex-column align-items-center">
         <span className="h4 text-secondary">Authentication</span>
         <input

@@ -28,7 +28,7 @@ router.post(
         });
       }
 
-      const { name, email, password, telephone_number } = req.body;
+      const { name, email, password, phone_number } = req.body;
       const candidate = await User.findOne({ email });
       if (candidate) {
         return res.status(400).json({ message: "Current euser already exist" });
@@ -38,7 +38,7 @@ router.post(
         name,
         email,
         password: hashedPassword,
-        telephone_number,
+        phone_number,
       });
       await user.save();
       res.status(201).json({ message: "New user was created" });
