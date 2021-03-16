@@ -33,7 +33,6 @@ export const RegisterPage = () => {
     try {
       const data = await request("/api/auth/register", "POST", { ...form });
       auth.register(data.token, data.userId)
-      //console.log(data.message);
     } catch (e) {}
   };
 
