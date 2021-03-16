@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 
 export const RegisterPage = () => {
-
   const auth = useContext(AuthContext);
 
   const { loading, error, request } = useHttp();
-  
 
   const timeMachine = (currentUnixTime) => {
     return new Date(currentUnixTime).toUTCString();
@@ -21,8 +20,6 @@ export const RegisterPage = () => {
     date: timeMachine(new Date()),
   });
 
-  
-
   useEffect(() => {}, [error]);
 
   const changeHandler = (event) => {
@@ -32,10 +29,9 @@ export const RegisterPage = () => {
   const registrationHandler = async () => {
     try {
       const data = await request("/api/auth/register", "POST", { ...form });
-      auth.register(data.token, data.userId)
+      auth.register(data.token, data.userId);
     } catch (e) {}
   };
-
 
   return (
     <div>
@@ -87,6 +83,7 @@ export const RegisterPage = () => {
           >
             Sign Up
           </button>
+          <Link to="/login">Back to login page</Link>
         </div>
       </div>
     </div>
