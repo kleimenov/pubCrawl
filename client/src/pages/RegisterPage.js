@@ -7,10 +7,13 @@ export const RegisterPage = () => {
   const { loading, error, request } = useHttp();
 
   const [form, setForm] = useState({
+    name: "",
     email: "",
     password: "",
+    telephone_number: ""
   });
   
+  console.log(form)
 
   useEffect(() => {}, [error]);
 
