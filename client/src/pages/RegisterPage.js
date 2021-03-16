@@ -17,7 +17,9 @@ export const RegisterPage = () => {
     phone_number: "",
     date: timeMachine(new Date()),
   });
- 
+
+  
+
   useEffect(() => {}, [error]);
 
   const changeHandler = (event) => {
