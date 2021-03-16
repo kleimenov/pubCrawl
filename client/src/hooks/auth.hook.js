@@ -20,6 +20,19 @@ export const useAuth = () => {
     );
   }, []);
 
+  const register = useCallback((jwtToken, id) => {
+    setToken(jwtToken);
+    setUserId(id);
+
+    localStorage.setItem(
+      storageName,
+      JSON.stringify({
+        userId: id,
+        token: jwtToken,
+      })
+    );
+  }, []);
+
   const logout = useCallback(() => {
     setToken(null);
     setUserId(null);
@@ -32,9 +45,10 @@ export const useAuth = () => {
 
     if (data && data.token) {
       login(data.token, data.userId);
+      register(data.token, data.userId)
     }
     setReady(true);
-  }, [login]);
+  }, [login, register]);
 
-  return { login, logout, token, userId, ready };
+  return { login, logout, register, token, userId, ready };
 };

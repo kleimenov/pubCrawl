@@ -3,8 +3,11 @@ import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 
 export const RegisterPage = () => {
+
   const auth = useContext(AuthContext);
+
   const { loading, error, request } = useHttp();
+  
 
   const timeMachine = (currentUnixTime) => {
     return new Date(currentUnixTime).toUTCString();
@@ -29,9 +32,12 @@ export const RegisterPage = () => {
   const registrationHandler = async () => {
     try {
       const data = await request("/api/auth/register", "POST", { ...form });
-      console.log(data);
+      auth.register(data.token, data.userId)
+      //console.log(data.message);
     } catch (e) {}
   };
+
+
   return (
     <div>
       <h3 className="text-secondary text-center">pubCrawl</h3>

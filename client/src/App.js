@@ -7,7 +7,7 @@ import { Navbar } from "./components/Navbar";
 import { Loader } from "./components/Loader";
 
 function App() {
-  const { token, login, logout, userId, ready } = useAuth();
+  const { token, login, register, logout, userId, ready } = useAuth();
   const isAuthenticated = !!token;
 
   const routes = useRoutes(isAuthenticated);
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <AuthContext.Provider
-      value={{ token, login, logout, userId, isAuthenticated }}
+      value={{ token, login, register, logout, userId, isAuthenticated }}
     >
       <Router>
         {isAuthenticated && <Navbar />}
