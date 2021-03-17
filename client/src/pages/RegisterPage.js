@@ -35,9 +35,9 @@ export const RegisterPage = () => {
 
   return (
     <div>
-      <h3 className="text-secondary text-center">pubCrawl</h3>
+      <h3 className="text-secondary text-right mb-3">pubCrawl</h3>
       <div className="d-flex flex-column align-items-center reg-form-custom-wrapper">
-        <span className="h4 text-secondary">Registration</span>
+        <span className="h4 text-secondary py-3">Registration</span>
         <input
           className="w-75 my-1"
           id="name"
@@ -77,13 +77,13 @@ export const RegisterPage = () => {
 
         <div className="d-flex justify-content-between align-items-center w-75 my-3">
           <button
-            className="btn btn-primary text-white p-0 px-2"
+            className="btn btn-secondary text-white p-0 px-2"
             onClick={registrationHandler}
             disabled={loading}
           >
             Sign Up
           </button>
-          <Link to="/login">Back to login page</Link>
+          <Link className="text-secondary" to="/login">Back to login page</Link>
         </div>
       </div>
     </div>
