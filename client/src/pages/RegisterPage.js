@@ -36,7 +36,7 @@ export const RegisterPage = () => {
   return (
     <div>
       <h3 className="text-secondary text-center">pubCrawl</h3>
-      <div className="d-flex flex-column align-items-center">
+      <div className="d-flex flex-column align-items-center reg-form-custom-wrapper">
         <span className="h4 text-secondary">Registration</span>
         <input
           className="w-75 my-1"
