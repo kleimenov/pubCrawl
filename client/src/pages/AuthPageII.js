@@ -58,7 +58,10 @@ export const AuthPageII = () => {
             Login
           </button>
           <div className="text-secondary">
-            Don't have an account? <Link className="text-dark h6 pt-1" to="/register">Sign Up</Link>
+            Don't have an account?{" "}
+            <Link className="text-dark h6 pt-1" to="/register">
+              Sign Up
+            </Link>
           </div>
         </div>
       </div>
