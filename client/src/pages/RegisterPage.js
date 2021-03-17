@@ -75,9 +75,9 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
 
-        <div className="d-flex justify-content-between align-items-center w-75 mt-2">
+        <div className="d-flex justify-content-between align-items-center w-75 my-3">
           <button
-            className="btn btn-primary text-white p-0 px-1"
+            className="btn btn-primary text-white p-0 px-2"
             onClick={registrationHandler}
             disabled={loading}
           >
