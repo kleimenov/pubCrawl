@@ -83,7 +83,9 @@ export const RegisterPage = () => {
           >
             Sign Up
           </button>
-          <Link className="text-dark h6 pt-2" to="/login">Back to login page</Link>
+          <Link className="text-dark h6 pt-2" to="/login">
+            Back to login page
+          </Link>
         </div>
       </div>
     </div>
