@@ -36,10 +36,10 @@ export const RegisterPage = () => {
   return (
     <div>
       <h3 className="text-secondary text-right mb-3">pubCrawl</h3>
-      <div className="d-flex flex-column align-items-center reg-form-custom-wrapper">
-        <span className="h4 text-secondary py-3">Registration</span>
+      <div className="d-flex flex-column align-items-center reg-form-custom-wrapper py-5">
+        <span className="h4 text-secondary">Registration</span>
         <input
-          className="custom-border w-75 my-1"
+          className="custom-border w-75 my-3"
           id="name"
           type="text"
           name="name"
@@ -48,7 +48,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
         <input
-          className="custom-border w-75 my-1"
+          className="custom-border w-75 my-3"
           id="email"
           type="text"
           name="email"
@@ -57,7 +57,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
         <input
-          className="custom-border w-75 my-1"
+          className="custom-border w-75 my-3"
           id="password"
           type="password"
           name="password"
@@ -66,7 +66,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
         <input
-          className="custom-border w-75 my-1"
+          className="custom-border w-75 my-3"
           id="phone_number"
           type="phone_number"
           name="phone_number"
@@ -75,7 +75,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
 
-        <div className="d-flex justify-content-between align-items-center w-75 mt-3 mb-5">
+        <div className="d-flex justify-content-between align-items-center w-75 mt-3">
           <button
             className="btn btn-secondary text-white py-1 px-2"
             onClick={registrationHandler}
