@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(248, 249, 253);
 }
 
 code {
@@ -15,4 +16,8 @@ code {
 .container {
   width: 800px;
   margin: 15px auto;
+}
+
+.header-custom {
+  background-color: rgb(244, 210, 189);
 }
