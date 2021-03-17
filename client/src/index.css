@@ -25,3 +25,17 @@ code {
 .reg-form-custom-wrapper {
   background-color: rgb(244, 210, 189);
 }
+
+.login-custom-wrapper {
+  background-color: rgb(244, 210, 189);
+}
+
+.btn-secondary {
+  border: none;
+}
+
+.custom-border {
+  border: none;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+}

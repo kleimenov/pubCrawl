@@ -27,11 +27,11 @@ export const AuthPageII = () => {
 
   return (
     <div>
-      <h3 className="text-secondary text-center">pubCrawl</h3>
-      <div className="d-flex flex-column align-items-center">
-        <span className="h4 text-secondary">Authentication</span>
+      <h3 className="text-secondary text-right mb-3">pubCrawl</h3>
+      <div className="d-flex flex-column align-items-center login-custom-wrapper">
+        <span className="h4 text-secondary my-3">Authentication</span>
         <input
-          className="w-75 my-1"
+          className="custom-border w-75 my-1"
           id="email"
           type="text"
           name="email"
@@ -40,7 +40,7 @@ export const AuthPageII = () => {
           onChange={changeHandler}
         />
         <input
-          className="w-75 my-1"
+          className="custom-border w-75 my-1"
           id="password"
           type="password"
           name="password"
@@ -49,16 +49,16 @@ export const AuthPageII = () => {
           onChange={changeHandler}
         />
 
-        <div className="d-flex justify-content-between align-items-center w-75 mt-2">
+        <div className="d-flex justify-content-between align-items-center w-75 mt-2 mb-4">
           <button
-            className="btn btn-primary text-white p-0 px-1"
+            className="btn btn-secondary text-white py-1 px-2"
             onClick={loginHandler}
             disabled={loading}
           >
             Login
           </button>
-          <div>
-            Don't have an account? <Link to="/register">Sign Up</Link>
+          <div className="text-secondary">
+            Don't have an account? <Link className="text-secondary h6 pt-1" to="/register">Sign Up</Link>
           </div>
         </div>
       </div>

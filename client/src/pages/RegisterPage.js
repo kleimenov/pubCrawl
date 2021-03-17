@@ -39,7 +39,7 @@ export const RegisterPage = () => {
       <div className="d-flex flex-column align-items-center reg-form-custom-wrapper">
         <span className="h4 text-secondary py-3">Registration</span>
         <input
-          className="w-75 my-1"
+          className="custom-border w-75 my-1"
           id="name"
           type="text"
           name="name"
@@ -48,7 +48,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
         <input
-          className="w-75 my-1"
+          className="custom-border w-75 my-1"
           id="email"
           type="text"
           name="email"
@@ -57,7 +57,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
         <input
-          className="w-75 my-1"
+          className="custom-border w-75 my-1"
           id="password"
           type="password"
           name="password"
@@ -66,7 +66,7 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
         <input
-          className="w-75 my-1"
+          className="custom-border w-75 my-1"
           id="phone_number"
           type="phone_number"
           name="phone_number"
@@ -75,15 +75,15 @@ export const RegisterPage = () => {
           onChange={changeHandler}
         />
 
-        <div className="d-flex justify-content-between align-items-center w-75 my-3">
+        <div className="d-flex justify-content-between align-items-center w-75 mt-3 mb-5">
           <button
-            className="btn btn-secondary text-white p-0 px-2"
+            className="btn btn-secondary text-white py-1 px-2"
             onClick={registrationHandler}
             disabled={loading}
           >
             Sign Up
           </button>
-          <Link className="text-secondary" to="/login">Back to login page</Link>
+          <Link className="text-secondary h6 pt-1" to="/login">Back to login page</Link>
         </div>
       </div>
     </div>
