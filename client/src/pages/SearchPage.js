@@ -32,7 +32,7 @@ export const SearchPage = () => {
       <h3>SearchPage</h3>
       {links.map((item, i) => (
         <li>
-          {item.name}/ {item.type}
+          {item.name}/ {item.type} 
         </li>
       ))}
     </div>
