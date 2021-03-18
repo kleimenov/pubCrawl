@@ -3,7 +3,7 @@ const Bars = require('../models/Bars');
 const router = Router();
 
 router.get("/", async (req, res) => {
-    console.log("Xyi from server")
+    //console.log("Xyi from server")
     try {
         const bars = await Bars.find({})
         //console.log(bars)
