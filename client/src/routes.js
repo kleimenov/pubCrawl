@@ -6,7 +6,7 @@ import { SearchPage } from "./pages/SearchPage";
 import { CreatePage } from "./pages/CreatePage";
 import { BarDetailPage } from "./pages/BarDetailPage";
 import { BarsPage } from "./pages/BarsPage";
-import {RegisterPage} from './pages/RegisterPage'
+import { RegisterPage } from "./pages/RegisterPage";
 
 export const useRoutes = (isAuthenticated) => {
   if (isAuthenticated) {
