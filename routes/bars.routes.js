@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
     console.log("Xyi from server")
     try {
         const bars = await Bars.find({})
-        console.log(bars)
+        //console.log(bars)
         res.json(bars);
     } catch (e) {
         res.status(500).json({ message: "Something goes wrong!" });

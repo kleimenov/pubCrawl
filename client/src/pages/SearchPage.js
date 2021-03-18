@@ -1,11 +1,10 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
-import {AuthContext} from '../context/AuthContext'
+import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 //import { LinksList } from "../components/LinksList";
 
 export const SearchPage = () => {
-
   const [links, setLinks] = useState([]);
   const { loading, request } = useHttp();
   const { token } = useContext(AuthContext);
@@ -26,13 +25,11 @@ export const SearchPage = () => {
   if (loading) {
     return <Loader />;
   }
-console.log(links)
+  console.log(links);
 
   return (
     <div>
       <h3>SearchPage</h3>
-    </div> 
+    </div>
   );
 };
-
-
