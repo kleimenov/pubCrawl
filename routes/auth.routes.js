@@ -45,11 +45,13 @@ router.post(
       const token = jwt.sign({ userid: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       });
-
+      
       res
         .status(201)
         .json({ message: "New user was created", token, userId: user.id });
-    } catch (e) {}
+    } catch (e) {
+      res.status(500).json({ message: "Something goes wrong!" });
+    }
   }
 );
 
@@ -90,9 +92,11 @@ router.post(
       const token = jwt.sign({ userid: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       });
-
+      
       res.json({ token, userId: user.id });
-    } catch (e) {}
+    } catch (e) {
+      res.status(500).json({ message: "Something goes wrong!" });
+    }
   }
 );
 
