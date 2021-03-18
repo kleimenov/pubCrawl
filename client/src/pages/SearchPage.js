@@ -11,7 +11,7 @@ export const SearchPage = () => {
 
   const fetchLinks = useCallback(async () => {
     try {
-      const fetched = await request("/api/bars", "GET", null, {
+      const fetched = await request("/api/search", "GET", null, {
         Authorization: `Bearer ${token}`,
       });
       setLinks(fetched);
