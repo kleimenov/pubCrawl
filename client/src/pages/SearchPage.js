@@ -25,14 +25,14 @@ export const SearchPage = () => {
   if (loading) {
     return <Loader />;
   }
-  console.log(links);
+  console.log(links); 
 
   return (
     <div>
       <h3>SearchPage</h3>
       {links.map((item, i) => (
         <li>
-          {item.name}/ {item.type} 
+          {item.name}/ {item.type}
         </li>
       ))}
     </div>
