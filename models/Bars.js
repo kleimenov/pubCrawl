@@ -8,7 +8,6 @@ const schema = new Schema({
     operation_hours: {type: Object},
     website: {type: String},
     phone: {type: String}
-
   })
 
 module.exports = model("Bars", schema)
