@@ -45,7 +45,7 @@ router.post(
       const token = jwt.sign({ userid: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       });
-      
+
       res
         .status(201)
         .json({ message: "New user was created", token, userId: user.id });
@@ -75,7 +75,7 @@ router.post(
       }
 
       const { email, password } = req.body;
- 
+
       const user = await User.findOne({ email });
       //console.log(user) //get user data OK
 
@@ -92,7 +92,7 @@ router.post(
       const token = jwt.sign({ userid: user.id }, config.get("jwtSecret"), {
         expiresIn: "1h",
       });
-      
+
       res.json({ token, userId: user.id });
     } catch (e) {
       res.status(500).json({ message: "Something goes wrong!" });
