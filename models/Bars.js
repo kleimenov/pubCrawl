@@ -6,3 +6,5 @@ const schema = new Schema({
     coordinates: {type: Types.ObjectId},
     hours: {type: Types.ObjectId},
 })
+
+module.exports = model("Bars", schema)
