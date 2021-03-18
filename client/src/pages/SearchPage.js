@@ -39,3 +39,16 @@ export const SearchPage = () => {
   );
 };
 
+
+/*
+ return (
+    <div>
+      <h3>SearchPage</h3>
+      {links.map((item, i) => (
+        <li>
+          {item.name}/ {item.type}
+        </li>
+      ))}
+    </div>
+  );
+  */
