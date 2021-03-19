@@ -3,7 +3,7 @@ const Bars = require("../models/Bars");
 const router = Router();
 
 //get data from search engine, and post it on server and get result (specific query)
-router.get("/", async (req, res) => {
+router.post("/", async (req, res) => {
   console.log("Xyi xyi");
   try {
 
