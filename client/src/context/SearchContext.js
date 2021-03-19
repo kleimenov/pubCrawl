@@ -1,7 +1,5 @@
 import { createContext } from "react";
 
-const mock = () => {}
+const mock = () => {};
 
-export const SearchContext = createContext({
-    
-})
+export const SearchContext = createContext({});

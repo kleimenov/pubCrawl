@@ -31,11 +31,10 @@ export const SearchPage = () => {
     const newForm = checkForm(form);
     console.log("data on client to server", newForm);
 
-    if(Object.keys(newForm).length) {
+    if (Object.keys(newForm).length) {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
-        
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
@@ -90,8 +89,6 @@ export const SearchPage = () => {
     </div>
   );
 };
-
-
 
 /*
 export const SearchPage = () => {
