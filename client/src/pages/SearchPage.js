@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
+import { Card, Form, Button } from "react-bootstrap";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
@@ -25,12 +26,11 @@ export const SearchPage = () => {
   if (loading) {
     return <Loader />;
   }
-  console.log(links); 
+  console.log(links);
 
   return (
     <div>
       <h3>SearchPage</h3>
-      
     </div>
   );
 };
