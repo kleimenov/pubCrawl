@@ -4,7 +4,6 @@ import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 
-
 export const SearchPage = () => {
   const [links, setLinks] = useState([]);
   const { loading, request } = useHttp();
@@ -34,23 +33,33 @@ export const SearchPage = () => {
       <Card className="text-left">
         <Card.Body>
           <Form className="text-secondary search-form-settings">
-            <Form.Group id="by name">
-
+            <Form.Group id="name">
+              <Form.Label>Search by Bar's name</Form.Label>
+              <Form.Control 
+              type="name" />
             </Form.Group>
-            <Form.Group id="by type">
-
+            <Form.Group id="type">
+            <Form.Label>Search by type (bar/pub and so on...</Form.Label>
+            <Form.Control 
+              type="type" />
             </Form.Group>
-            <Form.Group id="by city/district">
-
-            </Form.Group>
- 
- 
+            <Form.Group id="location">
+            <Form.Label>Search by type location (city/district).</Form.Label>
+            <Form.Control 
+              type="location" />
+           </Form.Group>
+           <Button
+            className="w-50 btn-secondary search-button-settings"
+            type="submit"
+          >
+            Search
+          </Button>
           </Form>
         </Card.Body>
       </Card>
     </div>
   );
-}; 
+};
 
 /*
 
@@ -108,7 +117,6 @@ return (
   );
 
   */
-
 
 /*
 export const SearchPage = () => {
