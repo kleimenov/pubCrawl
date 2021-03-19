@@ -4,10 +4,11 @@ const router = Router();
 
 //get data from search engine, and post it on server and get result (specific query)
 router.post("/", async (req, res) => {
-  console.log("Xyi xyi");
+  const data = req.body;
+  console.log("Xyi xyi", data);
   try {
 
-    const bars = await Bars.find({});
+    const bars = await Bars.find({type:"bar"});
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
