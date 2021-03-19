@@ -9,13 +9,11 @@ router.post("/", async (req, res) => {
 
   
   try {
-    const bars = await Bars.find({ "address": { "$regex": "M6" } });
-    //console.log(bars)
+    const bars = await Bars.find({ address: { $regex: "M6" } });
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
   }
 });
-
 
 module.exports = router;
