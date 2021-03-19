@@ -39,3 +39,8 @@ code {
   border-bottom: 1px solid gray;
   background-color: transparent;
 }
+
+.search-form-settings {
+  font-size: 20px;
+  font-weight: 600;
+}
