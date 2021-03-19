@@ -8,7 +8,7 @@ const router = Router();
 
 // /api/auth (all next routs will be concatinate with this path)
 
-//first auth route is:  /api/auth/register
+//first auth route is: /api/auth/register
 router.post(
   "/register",
   [
