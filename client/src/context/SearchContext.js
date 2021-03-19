@@ -1,1 +1,7 @@
-import {createContext} from 'react'
+import { createContext } from "react";
+
+const mock = () => {}
+
+export const SearchContext = createContext({
+    
+})
