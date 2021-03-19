@@ -8,11 +8,9 @@ router.post("/", async (req, res) => {
   console.log("Xyi xyi", data);
 
   
-
-
   try {
-
-    const bars = await Bars.find({});
+    const bars = await Bars.find({ "type": { "$regex": "bar" } });
+    //console.log(bars)
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
