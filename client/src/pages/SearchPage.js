@@ -38,6 +38,7 @@ export const SearchPage = () => {
           placeholder="Enter Bar's name"
           value={form.name}
           onChange={changeHandler}
+          autoComplete="off"
         />
         <input
           className="custom-border w-75 my-3"
@@ -47,6 +48,7 @@ export const SearchPage = () => {
           placeholder="Enter type (bar/pub and so on...)"
           value={form.type}
           onChange={changeHandler}
+          autoComplete="off"
         />
         <input
           className="custom-border w-75 my-3"
@@ -56,6 +58,7 @@ export const SearchPage = () => {
           placeholder="Enter location (city/district)"
           value={form.location}
           onChange={changeHandler}
+          autoComplete="off"
         />
         <div className="d-flex justify-content-between align-items-center w-75 mt-3">
           <button
