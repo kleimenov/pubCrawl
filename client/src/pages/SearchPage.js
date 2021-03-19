@@ -34,7 +34,17 @@ export const SearchPage = () => {
       <Card className="text-left">
         <Card.Body>
           <Form className="text-secondary search-form-settings">
+            <Form.Group id="by name">
 
+            </Form.Group>
+            <Form.Group id="by type">
+
+            </Form.Group>
+            <Form.Group id="by city/district">
+
+            </Form.Group>
+ 
+ 
           </Form>
         </Card.Body>
       </Card>
