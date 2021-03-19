@@ -5,6 +5,10 @@ import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
+
+  const {loading, error, request} = useHttp();
+
+
   return (
     <div>
       <h3>SearchPage</h3>
