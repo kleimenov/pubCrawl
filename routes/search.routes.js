@@ -7,8 +7,7 @@ router.post("/", async (req, res) => {
   const data = req.body;
   console.log("Xyi xyi", data);
 
-  console.log(Object.values(data).length)
-
+  
 
 
   try {

@@ -8,7 +8,7 @@ export const SearchPage = () => {
   const { loading, error, request } = useHttp();
 
   const [form, setForm] = useState({
-    name: "",
+    barName: "",
     type: "",
     location: "",
   });
@@ -16,6 +16,7 @@ export const SearchPage = () => {
   const changeHandler = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
+  
 
   const searchHandler = async () => {
     console.log("data on client to server", form);
