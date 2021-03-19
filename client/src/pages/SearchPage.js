@@ -38,7 +38,7 @@ export const SearchPage = () => {
         
       } catch (e) {}
     } else {
-      console.log("For is empty, please fill at least one field");
+      console.log("Form is empty, please fill at least one field");
     }
   };
 
