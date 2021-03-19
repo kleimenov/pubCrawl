@@ -3,7 +3,7 @@ import { Card, Form, Button } from "react-bootstrap";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
-//import { LinksList } from "../components/LinksList";
+
 
 export const SearchPage = () => {
   const [links, setLinks] = useState([]);
@@ -31,6 +31,7 @@ export const SearchPage = () => {
   return (
     <div>
       <h3>SearchPage</h3>
+
     </div>
   );
 };
