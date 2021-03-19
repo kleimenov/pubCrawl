@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
-import { Card, Form, Button } from "react-bootstrap";
+import { Card, Form, Button, FormGroup } from "react-bootstrap";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
@@ -16,14 +16,30 @@ export const SearchPage = () => {
   const changeHandler = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
-  
+
+  const checkForm = (formRaw) => {
+    const newForm = {};
+    for (let item in formRaw) {
+      if (formRaw[item]) {
+        newForm.item = formRaw[item];
+      }
+    }
+    return newForm;
+  };
 
   const searchHandler = async () => {
-    console.log("data on client to server", form);
-    try {
-      const data = await request("/api/search", "POST", { ...form });
-      console.log("data on client from server", data);
-    } catch (e) {}
+    const newForm = checkForm(form);
+    console.log("data on client to server", newForm);
+
+    if(Object.keys(newForm).length) {
+      try {
+        const data = await request("/api/search", "POST", { ...newForm });
+        console.log("data on client from server", data);
+        
+      } catch (e) {}
+    } else {
+      console.log("For is empty, please fill at least one field");
+    }
   };
 
   return (
@@ -33,11 +49,11 @@ export const SearchPage = () => {
         <span className="h4 text-secondary">SearchPage</span>
         <input
           className="custom-border w-75 my-3"
-          id="name"
+          id="barName"
           type="text"
           name="name"
           placeholder="Enter Bar's name"
-          value={form.name}
+          value={form.barName}
           onChange={changeHandler}
           autoComplete="off"
         />
