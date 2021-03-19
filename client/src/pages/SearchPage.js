@@ -34,7 +34,7 @@ export const SearchPage = () => {
 
     </div>
   );
-};
+}; 
 
 //for test
 /*
