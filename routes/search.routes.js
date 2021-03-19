@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
 
   
   try {
-    const bars = await Bars.find({ "type": { "$regex": "bar" } });
+    const bars = await Bars.find({ "address": { "$regex": "M6" } });
     //console.log(bars)
     res.json(bars);
   } catch (e) {
