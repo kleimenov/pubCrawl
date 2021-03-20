@@ -25,6 +25,7 @@ export const SearchPage = () => {
     }
     return newForm;
   };
+  
 
   const searchHandler = async () => {
     const newForm = checkForm(form);
