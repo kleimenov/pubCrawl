@@ -3,6 +3,18 @@ import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 
+
+
+
+
+
+
+
+
+
+
+
+/*
 export const SearchPage = () => {
   const { loading, error, request } = useHttp();
 
@@ -90,7 +102,7 @@ export const SearchPage = () => {
   );
 };
 
-/*
+
 export const SearchPage = () => {
   const [links, setLinks] = useState([]);
   const { loading, request } = useHttp();

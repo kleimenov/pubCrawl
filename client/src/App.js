@@ -25,7 +25,7 @@ function App() {
         <div className="container">{routes}</div>
       </Router>
     </AuthContext.Provider>
-  );
+  ); 
 }
 
 export default App;
