@@ -6,16 +6,14 @@ import { SearchResult } from "../components/SearchResult";
 import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
-  const {isSearched, search} = useSearch()
-  const [searched, setSearched] = useState(false)
+  const { isSearched, search } = useSearch();
+  const [searched, setSearched] = useState(false);
   //const searchq = useContext(SearchContext);
   //const isSearched = searchq.isSearched
   //console.log("on the search page", search)
- 
 
   if (searched) {
     return <SearchResult />;
   }
-  return <SearchEngine setSearched={setSearched}/>;
+  return <SearchEngine setSearched={setSearched} />;
 };
-
