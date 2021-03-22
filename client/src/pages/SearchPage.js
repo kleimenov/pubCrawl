@@ -9,7 +9,7 @@ export const SearchPage = () => {
   const {isSearched, search} = useSearch()
   //const searchq = useContext(SearchContext);
   //const isSearched = searchq.isSearched
-  console.log("on the search page", search)
+  //console.log("on the search page", search)
  
 
   if (search) {
