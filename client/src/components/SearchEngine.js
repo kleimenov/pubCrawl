@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
-//import {SearchContext} from '../context/SearchContext'
+import {SearchContext} from '../context/SearchContext'
 import { Loader } from "../components/Loader";
 import { useSearch } from "../hooks/search.hook";
 
