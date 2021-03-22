@@ -3,10 +3,13 @@ import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import {SearchContext} from '../context/SearchContext'
 import { Loader } from "../components/Loader";
+import { useSearch } from "../hooks/search.hook";
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
+  const {search, searched} = useSearch()
   
+  console.log("before click", search)
   
 
   const [form, setForm] = useState({
@@ -40,7 +43,8 @@ export const SearchEngine = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
-
+        search()
+        console.log("after click", searched)
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
