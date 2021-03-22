@@ -7,9 +7,9 @@ import { useSearch } from "../hooks/search.hook";
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
-  const { search, searched } = useSearch();
+  const { isSearched, search} = useSearch();
 
-  //console.log("before click", search)
+  console.log("before click", search)
 
   const [form, setForm] = useState({
     barName: "",
@@ -39,8 +39,7 @@ export const SearchEngine = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
-        //search()
-        //console.log("after click", searched)
+       
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");

@@ -1,11 +1,11 @@
 import { useState, useCallback, useEffect } from "react";
 
 export const useSearch = () => {
-  const [searched, setSearched] = useState(false);
+  const [search, setSearch] = useState(false);
 
-  const search = useCallback((searched) => {
-    setSearched(!searched);
+  const isSearched = useCallback(() => {
+    
   }, []);
 
-  return { search, searched };
+  return { isSearched, search };
 };  
