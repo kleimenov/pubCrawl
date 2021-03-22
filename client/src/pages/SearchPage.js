@@ -2,13 +2,18 @@ import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useSearch } from "../hooks/search.hook";
 import { SearchContext } from "../context/SearchContext";
 import { Loader } from "../components/Loader";
+import { SearchEngine} from '../components/SearchEngine'
 
 
 export const SearchPage = () => {
   const search = useContext(SearchContext)
   
   
-
+  if(!search.isSearched){
+    return(
+      <SearchEngine />
+    )
+  }
   return (
     <div>Hello you!</div>
   )

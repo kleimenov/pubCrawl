@@ -3,7 +3,7 @@ import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 
-export const SearchPage = () => {
+export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
 
   const [form, setForm] = useState({
@@ -35,6 +35,7 @@ export const SearchPage = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
+
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
