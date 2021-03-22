@@ -7,6 +7,7 @@ import { SearchEngine} from '../components/SearchEngine'
 
 export const SearchPage = () => {
   const search = useContext(SearchContext)
+  console.log(search.searchResult)
   
   
   if(!search.isSearched){
