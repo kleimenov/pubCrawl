@@ -8,4 +8,4 @@ export const useSearch = () => {
   }, []);
 
   return { search, searched };
-};
+};  
