@@ -7,3 +7,4 @@ export const SearchContext = createContext({
     clearSearch: mock,
     isSearched: false
 });
+ 
