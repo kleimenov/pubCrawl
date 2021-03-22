@@ -1,8 +1,9 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useSearch } from "../hooks/search.hook";
 import { SearchContext } from "../context/SearchContext";
-import { Loader } from "../components/Loader";
 import { SearchEngine} from '../components/SearchEngine'
+import {} from '../components/SearchResult'
+import { Loader } from "../components/Loader";
 
 
 export const SearchPage = () => {
@@ -15,9 +16,7 @@ export const SearchPage = () => {
       <SearchEngine />
     )
   }
-  return (
-    <div>Hello you!</div>
-  )
+  <SearchResult />
 }
 
 
