@@ -7,10 +7,9 @@ import { useSearch } from "../hooks/search.hook";
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
-  const {search, searched} = useSearch()
-  
+  const { search, searched } = useSearch();
+
   //console.log("before click", search)
-  
 
   const [form, setForm] = useState({
     barName: "",
@@ -31,15 +30,12 @@ export const SearchEngine = () => {
     }
     return newForm;
   };
-  
 
   const searchHandler = async () => {
     const newForm = checkForm(form);
     //console.log("data on client to server", newForm);
 
     if (Object.keys(newForm).length) {
-        
-
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
@@ -99,4 +95,3 @@ export const SearchEngine = () => {
     </div>
   );
 };
-
