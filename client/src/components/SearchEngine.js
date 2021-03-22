@@ -9,7 +9,7 @@ export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
   const {search, searched} = useSearch()
   
-  console.log("before click", search)
+  //console.log("before click", search)
   
 
   const [form, setForm] = useState({
@@ -35,7 +35,7 @@ export const SearchEngine = () => {
 
   const searchHandler = async () => {
     const newForm = checkForm(form);
-    console.log("data on client to server", newForm);
+    //console.log("data on client to server", newForm);
 
     if (Object.keys(newForm).length) {
         
