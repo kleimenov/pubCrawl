@@ -7,3 +7,4 @@ export const useSearch = () => {
 
   return { isSearched, search };
 };
+
