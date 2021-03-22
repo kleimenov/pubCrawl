@@ -43,8 +43,8 @@ export const SearchEngine = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
-        search()
-        console.log("after click", searched)
+        //search()
+        //console.log("after click", searched)
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
