@@ -1,19 +1,18 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useSearch } from "../hooks/search.hook";
-import { SearchContext } from "../context/SearchContext";
+//import { SearchContext } from "../context/SearchContext";
 import { SearchEngine } from "../components/SearchEngine";
 import { SearchResult } from "../components/SearchResult";
 import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
   const {search, searched} = useSearch()
-  const searchq = useContext(SearchContext);
-  const isSearched = searchq.isSearched
-
-  console.log("on the search page", searched)
+  //const searchq = useContext(SearchContext);
+  //const isSearched = searchq.isSearched
+  //console.log("on the search page", searched)
  
 
-  if (isSearched) {
+  if (searched) {
     return <SearchResult />;
   }
   return <SearchEngine />;
