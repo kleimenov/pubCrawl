@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 import { useSearch } from "../hooks/search.hook";
 
-export const SearchEngine = () => {
+export const SearchEngine = ({setSearched}) => {
   const { loading, error, request } = useHttp();
   const {} = useSearch();
 
@@ -37,6 +37,7 @@ export const SearchEngine = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
+        setSearched(true)
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
