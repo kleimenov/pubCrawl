@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
-import { useHttp } from "../hooks/http.hook";
+import { useSearch } from "../hooks/search.hook";
 import { SearchContext } from "../context/SearchContext";
 import { Loader } from "../components/Loader";
 
