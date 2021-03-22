@@ -8,5 +8,5 @@ export const AuthContext = createContext({
     login: mock,
     register: mock, 
     logout: mock,
-    isAuthenticated: false
+    isAuthenticated: false 
 })

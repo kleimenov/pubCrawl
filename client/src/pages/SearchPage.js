@@ -7,15 +7,13 @@ import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
   const search = useContext(SearchContext);
+  const isSearched = false;
+  console.log(isSearched)
 
-  if (!search.isSearched) {
-    return <SearchEngine />;
+  if (isSearched) {
+    return <SearchResult />;
   }
-  /*
-  if (loading) {
-    return <Loader />;
-  }*/
-
-  return <SearchResult />;
+  
+  return <SearchEngine />;
 };
 
