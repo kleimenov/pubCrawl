@@ -2,4 +2,7 @@ import { createContext } from "react";
 
 const mock = () => {};
 
-export const SearchContext = createContext({});
+export const SearchContext = createContext({
+    
+    isSearched: false
+});

@@ -4,7 +4,12 @@ import { AuthContext } from "../context/AuthContext";
 import { Loader } from "../components/Loader";
 
 
-
+export const SearchPage = () => {
+  
+  return (
+    <div>Hello you!</div>
+  )
+}
 
 
 
