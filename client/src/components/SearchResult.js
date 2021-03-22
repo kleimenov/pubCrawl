@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
 export const SearchResult = () => {
-    return (
-        <div>Hello you are on SearchResult component!</div>
-      )
-}
+  return (
+    <div>
+        Hello you are on SearchResult component!
+    </div>
+    );
+};
