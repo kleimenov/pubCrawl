@@ -1,10 +1,13 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
+import {SearchContext} from '../context/SearchContext'
 import { Loader } from "../components/Loader";
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
+  
+  
 
   const [form, setForm] = useState({
     barName: "",
@@ -32,6 +35,8 @@ export const SearchEngine = () => {
     console.log("data on client to server", newForm);
 
     if (Object.keys(newForm).length) {
+        
+
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
