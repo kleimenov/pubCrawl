@@ -13,7 +13,6 @@ export const SearchPage = () => {
   if (isSearched) {
     return <SearchResult />;
   }
-  
   return <SearchEngine />;
 };
 
