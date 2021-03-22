@@ -1,11 +1,14 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
-import { AuthContext } from "../context/AuthContext";
+import { SearchContext } from "../context/SearchContext";
 import { Loader } from "../components/Loader";
 
 
 export const SearchPage = () => {
+  const search = useContext(SearchContext)
   
+  
+
   return (
     <div>Hello you!</div>
   )
