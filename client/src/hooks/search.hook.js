@@ -11,4 +11,5 @@ export const useSearch = () => {
         setSearch(false)
     }, [])
 
+    return {}
 }
