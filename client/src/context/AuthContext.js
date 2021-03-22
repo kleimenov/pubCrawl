@@ -6,7 +6,7 @@ export const AuthContext = createContext({
     token: null,
     userId: null,
     login: mock,
-    register: mock,
+    register: mock, 
     logout: mock,
     isAuthenticated: false
 })
