@@ -1,11 +1,11 @@
 import { useState, useCallback, useEffect } from "react";
 
 export const useSearch = () => {
-  const [search, setSearch] = useState(false);
+  const [searched, setSearch] = useState(false);
   const [searching, setSearching] = useState(false);
   const [error, setError] = useState(null);
 
-  const clearSearch = useCallback(() => {
+  const search = useCallback(() => {
     try {
       //throw new Error("Something went wrong")
     } catch (e) {
@@ -14,5 +14,5 @@ export const useSearch = () => {
     }
   }, []);
 
-  return {search, searching, error};
+  return {search, searched, searching, error};
 };

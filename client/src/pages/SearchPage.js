@@ -6,6 +6,7 @@ import { SearchResult } from "../components/SearchResult";
 import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
+  const {search, searching, error} = useSearch()
   const search = useContext(SearchContext);
   const isSearched = search.isSearched
  
