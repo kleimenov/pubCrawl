@@ -11,10 +11,10 @@ export const SearchResult = ({ data, isSearched }) => {
   };
   return (
     <div>
-      <h4 className="text-secondary text-right">
+      <h4 className="text-secondary text-right my-4">
         This is result of your search:
       </h4>
-      <ul>
+      <ul className="list-unstyled my-3">
         {data.map((item, i) => (
           <li className="my-2" key={item._id}>
             <div className="search-wrapper">
@@ -32,7 +32,7 @@ export const SearchResult = ({ data, isSearched }) => {
         ))}
       </ul>
 
-      <div className="d-flex justify-content-end align-items-center mt-5">
+      <div className="d-flex justify-content-start align-items-center mt-5">
         <button
           className="btn btn-secondary text-white py-1 px-2"
           onClick={returnHandler}

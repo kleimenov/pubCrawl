@@ -49,3 +49,10 @@ code {
   font-size: 20px;
   font-weight: 600;
 }
+
+.search-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
