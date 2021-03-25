@@ -10,7 +10,6 @@ import { SearchResult } from "../components/SearchResult";
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
   const [response, setResponse] = useState([]);
-  //const [search, setSearch] = useState(false)
   const {search, isSearched} = useSearch();
 
   const [form, setForm] = useState({
