@@ -31,7 +31,6 @@ export const SearchEngine = ({setSearched}) => {
 
   const searchHandler = async () => {
     const newForm = checkForm(form);
-    //console.log("data on client to server", newForm);
 
     if (Object.keys(newForm).length) {
       try {

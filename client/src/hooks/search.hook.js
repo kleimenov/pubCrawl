@@ -5,6 +5,6 @@ export const useSearch = () => {
 
    useCallback(() => {setSearch(true)}, []);
 
-  return { isSearched, search };
+  return { setSearch, search };
 };
 

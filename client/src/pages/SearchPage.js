@@ -7,16 +7,16 @@ import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
   const { isSearched, search } = useSearch();
-  //const [searched, setSearched] = useState(false);
+  const [searched, setSearched] = useState(false);
   console.log("on the search page", search)
 
   //const searchq = useContext(SearchContext);
   //const isSearched = searchq.isSearched
   //console.log("on the search page", search)
 
-  if (search) {
-    return <SearchResult />;
+  if (searched) {
+    return <SearchResult setSearched={setSearched}/>;
   }
-  //return <SearchEngine setSearched={setSearched} />;
-  return <SearchEngine />
+  return <SearchEngine setSearched={setSearched} />;
+  
 };
