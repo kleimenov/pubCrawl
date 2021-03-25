@@ -6,5 +6,5 @@ import { SearchResult } from "../components/SearchResult";
 import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
-  return <SearchEngine />;
+  return <SearchEngine />
 };
