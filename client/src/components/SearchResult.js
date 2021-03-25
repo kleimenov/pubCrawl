@@ -21,10 +21,7 @@ export const SearchResult = ({ data, isSearched }) => {
               <h5 className="text-secondary ml-2 pt-2">
                 {item.name} / {item.type} / {item.district}
               </h5>
-              <Button
-                className="btn-primary p-0 px-1 py-0 ml-1"
-                type="submit"
-              >
+              <Button className="btn-primary p-0 px-1 py-0 ml-1" type="submit">
                 +bar
               </Button>
             </div>
