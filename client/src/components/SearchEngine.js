@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { useSearch } from "../hooks/search.hook";
 import { SearchResult } from "../components/SearchResult";
