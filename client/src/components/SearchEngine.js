@@ -42,6 +42,8 @@ export const SearchEngine = () => {
         console.log("data on client from server", data);
         setResponse(data)
         isSearched()
+        setForm({})
+        console.log(form)
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
