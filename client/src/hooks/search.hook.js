@@ -3,7 +3,7 @@ import { useState, useCallback, useEffect } from "react";
 export const useSearch = () => {
   const [search, setSearch] = useState(false);
 
-  const isSearched = useCallback(() => {setSearch(!search)}, []);
+   useCallback(() => {setSearch(true)}, []);
 
   return { isSearched, search };
 };

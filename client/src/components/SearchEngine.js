@@ -7,7 +7,8 @@ import { useSearch } from "../hooks/search.hook";
 
 export const SearchEngine = ({setSearched}) => {
   const { loading, error, request } = useHttp();
-  const {} = useSearch();
+  //const {isSearched, search} = useSearch();
+  
 
   const [form, setForm] = useState({
     barName: "",
