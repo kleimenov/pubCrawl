@@ -3,7 +3,7 @@ import { useHttp } from "../hooks/http.hook";
 import { useSearch } from "../hooks/search.hook";
 
 
-import { Loader } from "../components/Loader";
+
 import { SearchResult } from "../components/SearchResult";
 
 
