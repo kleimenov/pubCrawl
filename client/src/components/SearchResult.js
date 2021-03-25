@@ -5,6 +5,7 @@ import { useHttp } from "../hooks/http.hook";
 export const SearchResult = ({setSearched}) => {
   const {loading, request} = useHttp()
 
+  console.log(request)
   const searchHandler = () => {
     setSearched(false)
   }

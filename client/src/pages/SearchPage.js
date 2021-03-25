@@ -7,11 +7,11 @@ import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
   //const { isSearched, search } = useSearch();
-  const [searched, setSearched] = useState(false);
+  //const [searched, setSearched] = useState(false);
 
-  if (searched) {
-    return <SearchResult setSearched={setSearched}/>;
-  }
-  return <SearchEngine setSearched={setSearched} />;
-  
+  //if (searched) {
+    //return <SearchResult setSearched={setSearched}/>;
+  //}
+  //return <SearchEngine setSearched={setSearched} />;
+  return <SearchEngine />;
 };
