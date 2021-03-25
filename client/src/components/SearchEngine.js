@@ -1,15 +1,18 @@
 import React, { useCallback, useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
+import { useSearch } from "../hooks/search.hook";
 import { AuthContext } from "../context/AuthContext";
 import { SearchContext } from "../context/SearchContext";
 import { Loader } from "../components/Loader";
 import { SearchResult } from "../components/SearchResult";
-import { useSearch } from "../hooks/search.hook";
+
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
-  const [searched, setSearched] = useState(false);
-  const {isSearched, search} = useSearch();
+  const [response, setResponse] = useState([]);
+  const {search, isSearched} = useSearch();
+
+  //console.log(search)
 
   const [form, setForm] = useState({
     barName: "",
@@ -38,14 +41,15 @@ export const SearchEngine = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
-        setSearched(true);
+        setResponse(data)
+        isSearched()
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
     }
   };
 
-  if (!searched) {
+  if (!search) {
     return (
       <div>
         <h3 className="text-secondary text-right mb-3">pubCrawl</h3>
@@ -94,5 +98,5 @@ export const SearchEngine = () => {
       </div>
     );
   }
-  return <SearchResult />;
+  return <SearchResult data={response} search={search}/>;
 };
