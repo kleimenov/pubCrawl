@@ -15,8 +15,8 @@ export const SearchResult = ({ data, isSearched }) => {
         This is result of your search:
       </h4>
       <ul>
-        {data.map((item) => (
-          <li className="my-2">
+        {data.map((item, i) => (
+          <li className="my-2" key={item._id}>
             <div className="search-wrapper">
               <h5 className="text-secondary ml-2 pt-2">
                 {item.name} / {item.type} / {item.district}
