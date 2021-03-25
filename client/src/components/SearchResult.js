@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHttp } from "../hooks/http.hook";
-import { useSearch } from "../hooks/search.hook"
+
 
 
 export const SearchResult = ({data, isSearched}) => {
