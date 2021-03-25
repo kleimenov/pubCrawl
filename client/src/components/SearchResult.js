@@ -3,14 +3,14 @@ import { useHttp } from "../hooks/http.hook";
 import { useSearch } from "../hooks/search.hook"
 
 
-export const SearchResult = ({data, search}) => {
-  const [moveBack, setMoveBack] = useState(search);
+export const SearchResult = ({data, isSearched}) => {
+  
   const {loading} = useHttp()
-  console.log(moveBack, data)
-  const {isSearched} = useSearch()
+  console.log(data)
+
   
   const searchHandler = () => {
-   return isSearched()
+    isSearched()
   }
   return (
     <div>

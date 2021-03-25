@@ -10,6 +10,7 @@ import { SearchResult } from "../components/SearchResult";
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
   const [response, setResponse] = useState([]);
+  //const [search, setSearch] = useState(false)
   const {search, isSearched} = useSearch();
 
   //console.log(search)
@@ -98,5 +99,5 @@ export const SearchEngine = () => {
       </div>
     );
   }
-  return <SearchResult data={response} search={search}/>;
+  return <SearchResult data={response} isSearched={isSearched}/>;
 };
