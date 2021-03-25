@@ -13,8 +13,6 @@ export const SearchEngine = () => {
   //const [search, setSearch] = useState(false)
   const {search, isSearched} = useSearch();
 
-  //console.log(search)
-
   const [form, setForm] = useState({
     barName: "",
     type: "",

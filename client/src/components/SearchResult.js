@@ -4,13 +4,15 @@ import { useSearch } from "../hooks/search.hook"
 
 
 export const SearchResult = ({data, isSearched}) => {
-  
   const {loading} = useHttp()
   console.log(data)
 
   
   const searchHandler = () => {
-    isSearched()
+    try {
+     isSearched()
+    } catch (e) {
+    }
   }
   return (
     <div>
