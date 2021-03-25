@@ -3,11 +3,10 @@ import { useHttp } from "../hooks/http.hook";
 import { useSearch } from "../hooks/search.hook";
 import { SearchResult } from "../components/SearchResult";
 
-
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
   const [response, setResponse] = useState([]);
-  const {search, isSearched} = useSearch();
+  const { search, isSearched } = useSearch();
 
   const [form, setForm] = useState({
     barName: "",
@@ -36,10 +35,10 @@ export const SearchEngine = () => {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
         console.log("data on client from server", data);
-        setResponse(data)
-        isSearched()
-        setForm({})
-        console.log(form)
+        setResponse(data);
+        isSearched();
+        setForm({});
+        console.log(form);
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
@@ -95,5 +94,5 @@ export const SearchEngine = () => {
       </div>
     );
   }
-  return <SearchResult data={response} isSearched={isSearched}/>;
+  return <SearchResult data={response} isSearched={isSearched} />;
 };
