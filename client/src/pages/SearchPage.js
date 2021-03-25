@@ -6,9 +6,9 @@ import { SearchResult } from "../components/SearchResult";
 import { Loader } from "../components/Loader";
 
 export const SearchPage = () => {
-  const { isSearched, search } = useSearch();
+  //const { isSearched, search } = useSearch();
   const [searched, setSearched] = useState(false);
-  console.log("on the search page", search)
+  
 
   //const searchq = useContext(SearchContext);
   //const isSearched = searchq.isSearched
