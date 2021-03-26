@@ -34,9 +34,11 @@ export const SearchEngine = () => {
     if (Object.keys(newForm).length) {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
+        console.log("data on client from server", data);
         setResponse(data);
         isSearched();
         setForm({});
+        console.log(form);
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
@@ -53,7 +55,7 @@ export const SearchEngine = () => {
             className="custom-border w-75 my-3"
             id="barName"
             type="text"
-            name="name"
+            name="barName"
             placeholder="Enter Bar's name"
             value={form.barName}
             onChange={changeHandler}

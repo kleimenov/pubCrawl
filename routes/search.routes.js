@@ -8,9 +8,9 @@ router.post("/", async (req, res) => {
 
   //get data from client side
   const data = req.body;
-
+  console.log(data)
   //check what data we have
-  console.log(Object.keys(data).length)
+  
   
   
 
