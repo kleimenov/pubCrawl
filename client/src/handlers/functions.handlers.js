@@ -11,3 +11,5 @@ const toCapitalize = (string) => {
     }
     return newArr.join(" ");
   };
+
+  
