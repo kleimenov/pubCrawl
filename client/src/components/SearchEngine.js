@@ -19,16 +19,12 @@ export const SearchEngine = () => {
   };
 
   const checkForm = (formRaw) => {
-    console.log('enter', formRaw)
     const newForm = {};
     for (let item in formRaw) {
-      console.log('inside loop', item, formRaw[item])
       if (formRaw[item]) {
         newForm[item] = formRaw[item];
-        console.log(newForm)
       }
     }
-    console.log(newForm, "iside function")
     return newForm;
   };
 
