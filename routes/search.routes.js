@@ -6,7 +6,11 @@ const router = Router();
 //get data from search engine, and post it on server and get result (specific query)
 router.post("/", async (req, res) => {
 
+  //get data from client side
   const data = req.body;
+
+  //check what data we have
+  console.log(Object.keys(data).length)
   
   
 
