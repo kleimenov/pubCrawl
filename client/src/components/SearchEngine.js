@@ -34,7 +34,7 @@ export const SearchEngine = () => {
     if (Object.keys(newForm).length) {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
-        //console.log("data on client from server", data);
+       
         setResponse(data);
         isSearched();
         setForm({});
