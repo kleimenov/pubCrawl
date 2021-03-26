@@ -34,11 +34,11 @@ export const SearchEngine = () => {
     if (Object.keys(newForm).length) {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
-        console.log("data on client from server", data);
+        //console.log("data on client from server", data);
         setResponse(data);
         isSearched();
         setForm({});
-        console.log(form);
+        //console.log(form);
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");

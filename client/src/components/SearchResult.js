@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { Button } from "react-bootstrap";
 
 export const SearchResult = ({ data, isSearched }) => {
   const { loading } = useHttp();
 
+  console.log(data)
   const returnHandler = () => {
     isSearched();
   };
+
   return (
     <div>
       <h4 className="text-secondary text-right my-4">
