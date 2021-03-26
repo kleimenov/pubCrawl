@@ -4,8 +4,11 @@ const router = Router();
 
 //get data from search engine, and post it on server and get result (specific query)
 router.post("/", async (req, res) => {
+
   const data = req.body;
   console.log("Xyi xyi", data);
+
+  
 
   try {
     const bars = await Bars.find({ address: { $regex: "M6" } });
