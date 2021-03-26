@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
   const data = req.body;
   console.log("Xyi xyi", data);
 
-  console.log(toCapitalize)
+  console.log(toCapitalize(data.item))
   
 
   try {
