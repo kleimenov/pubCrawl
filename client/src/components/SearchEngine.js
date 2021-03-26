@@ -19,12 +19,16 @@ export const SearchEngine = () => {
   };
 
   const checkForm = (formRaw) => {
+    console.log('enter', formRaw)
     const newForm = {};
     for (let item in formRaw) {
+      console.log('inside loop', item, formRaw[item])
       if (formRaw[item]) {
-        newForm.item = formRaw[item];
+        newForm[item] = formRaw[item];
+        console.log(newForm)
       }
     }
+    console.log(newForm, "iside function")
     return newForm;
   };
 
@@ -34,11 +38,11 @@ export const SearchEngine = () => {
     if (Object.keys(newForm).length) {
       try {
         const data = await request("/api/search", "POST", { ...newForm });
-        console.log("data on client from server", data);
+        //console.log("data on client from server", data);
         setResponse(data);
         isSearched();
         setForm({});
-        console.log(form);
+        //console.log(form);
       } catch (e) {}
     } else {
       console.log("Form is empty, please fill at least one field");
