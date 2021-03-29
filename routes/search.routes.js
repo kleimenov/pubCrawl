@@ -8,7 +8,6 @@ router.post("/", async (req, res) => {
   //get data from client side
   const data = req.body;
  
-
   //check what data we have
   
   
