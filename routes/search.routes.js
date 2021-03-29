@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const Bars = require("../models/Bars");
-const toCapitalize = require("../handlers/functions.handlers");
+const handlers = require("../handlers/functions.handlers");
 const router = Router();
 
 //get data from search engine, and post it on server and get result (specific query)
@@ -9,6 +9,7 @@ router.post("/", async (req, res) => {
   const data = req.body;
   console.log(data);
   //check what data we have
+
 
 
   try {
