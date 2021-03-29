@@ -11,7 +11,7 @@ export const SearchEngine = () => {
   const [form, setForm] = useState({
     barName: "",
     type: "",
-    location: "",
+    district: "",
   });
 
   const changeHandler = (event) => {
@@ -71,11 +71,11 @@ export const SearchEngine = () => {
           />
           <input
             className="custom-border w-75 my-3"
-            id="location"
+            id="district"
             type="text"
-            name="location"
+            name="district"
             placeholder="Enter location (city/district)"
-            value={form.location}
+            value={form.district}
             onChange={changeHandler}
             autoComplete="off"
           />

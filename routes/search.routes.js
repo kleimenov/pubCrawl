@@ -7,13 +7,21 @@ const router = Router();
 router.post("/", async (req, res) => {
   //get data from client side
   const data = req.body;
+  console.log(data);
  
   //check what data we have
   
   
   try {
     //const bars = await Bars.find({ address: { $regex: "M6" } });
-    const bars = await Bars.find({ });
+    const bars = await Bars.find(data);
+    /*
+    const bars = await Bars.find({$or:
+      [
+        {name: data.barName},
+        {type: data.type}, 
+        {location: data.location}
+      ]});*/
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
