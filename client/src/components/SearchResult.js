@@ -20,7 +20,7 @@ export const SearchResult = ({ data, isSearched }) => {
           <li className="my-2" key={item._id}>
             <div className="search-wrapper">
               <h5 className="text-secondary ml-2 pt-2">
-                {item.name} / {item.type} / {item.district}
+                {item.barName} / {item.type} / {item.district}
               </h5>
               <Button className="btn-primary p-0 px-1 py-0 ml-1" type="submit">
                 +bar
