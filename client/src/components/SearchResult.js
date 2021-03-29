@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 export const SearchResult = ({ data, isSearched }) => {
   const { loading } = useHttp();
 
-  console.log(data)
+  console.log(data);
   const returnHandler = () => {
     isSearched();
   };
