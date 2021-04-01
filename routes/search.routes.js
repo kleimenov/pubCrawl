@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
   const data = req.body;
   console.log(data);
  
-  //check what data we have
+  
   
   
   try {
