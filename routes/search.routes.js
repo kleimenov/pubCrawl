@@ -7,6 +7,7 @@ const router = Router();
 router.post("/", async (req, res) => {
   //get data from client side
   const data = req.body;
+  console.log('raw data before', data)
 
   try {
     //const bars = await Bars.find({ address: { $regex: "M6" } }); //reg expression just in case
