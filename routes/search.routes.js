@@ -14,7 +14,6 @@ router.post("/", async (req, res) => {
   try {
     //const bars = await Bars.find({ address: { $regex: "M6" } }); //reg expression just in case
     const bars = await Bars.find(data);
-    
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
