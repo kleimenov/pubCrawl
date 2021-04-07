@@ -17,8 +17,10 @@ const toLowercase = (string) => {
 };
 
 const queryValidator = (data) => {
-  const newData = {}
-  
+  for (let element in data) {
+    data[element] = toLowercase(data[element])
+  }
+  return data;
 }
 
 module.exports = {
