@@ -18,18 +18,16 @@ const toLowercase = (string) => {
 
 const queryValidator = (data) => {
   for (let element in data) {
-    data[element] = toLowercase(data[element])
+    data[element] = toLowercase(data[element]);
   }
   return data;
-}
+};
 
 module.exports = {
   toCapitalize,
   toLowercase,
-  queryValidator
+  queryValidator,
 };
-
-
 
 /*
 export const handlersFunctions = () => {
