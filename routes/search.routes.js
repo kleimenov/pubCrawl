@@ -11,7 +11,6 @@ router.post("/", async (req, res) => {
 
   //apply validation function, transform data to lowercase
   const validatedData = handlers.queryValidator(data);
-
   console.log("raw data after", validatedData);
 
   try {
