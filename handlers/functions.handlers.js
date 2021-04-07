@@ -17,6 +17,8 @@ const toLowercase = (string) => {
 };
 
 const queryValidator = (data) => {
+  const newData = {}
+  
 }
 
 module.exports = {
