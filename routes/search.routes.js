@@ -10,12 +10,12 @@ router.post("/", async (req, res) => {
   
   //apply validation function, transform data to lowercase, currently I won't use this function,
   //anyway I will store it here just in case.
-  const validatedData = handlers.queryValidator(data);
-  
+  //const validatedData = handlers.queryValidator(data);
+  console.log(data);
 
   try {
     //const bars = await Bars.find({ address: { $regex: "M6" } }); //reg expression just in case
-    const bars = await Bars.find({$or: [{barName:data.barName}, {type:data.type}, {district:data.district}]});
+    const bars = await Bars.find({$or: [{"barName":data.barName}, {"type":data.type}, {"district":data.district}]});
     //const bars = await Bars.find({$or: [{barName:validatedData.barName}, {type:validatedData.type}, {district:validatedData.district}]});
     
     
