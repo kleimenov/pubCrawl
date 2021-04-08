@@ -11,11 +11,12 @@ router.post("/", async (req, res) => {
 
   //apply validation function, transform data to lowercase
   const validatedData = handlers.queryValidator(data);
-  console.log("raw data after", validatedData);
+  console.log("raw data after", validatedData.type);
 
   try {
     //const bars = await Bars.find({ address: { $regex: "M6" } }); //reg expression just in case
     const bars = await Bars.find({$or: [data]});
+    //console.log(bars);
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
