@@ -8,7 +8,8 @@ router.post("/", async (req, res) => {
   //get data from client side
   const data = req.body;
   
-  //apply validation function, transform data to lowercase, currently I won't use this function, anyway I will store it here just in case.
+  //apply validation function, transform data to lowercase, currently I won't use this function,
+  //anyway I will store it here just in case.
   const validatedData = handlers.queryValidator(data);
   
 
