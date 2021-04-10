@@ -87,6 +87,7 @@ export const SearchEngine = () => {
             >
               Search
             </button>
+            <button className="btn btn-secondary text-white py-1 px-2">All Bars</button>
           </div>
         </div>
       </div>
