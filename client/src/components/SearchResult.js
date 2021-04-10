@@ -8,7 +8,7 @@ export const SearchResult = ({ data, isSearched }) => {
 
   const returnHandler = () => {
     isSearched();
-  };
+  }; 
 
   return (
     <div>
