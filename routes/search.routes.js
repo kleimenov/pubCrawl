@@ -5,7 +5,6 @@ const router = Router();
 
 //get data from search engine, and post it on server and get result (specific query)
 router.post("/", async (req, res) => {
-  
   //get data from client side
   const data = req.body;
 
@@ -16,7 +15,13 @@ router.post("/", async (req, res) => {
   try {
     //const bars = await Bars.find({ address: { $regex: "M6" } }); //reg expression just in case
     //const bars = await Bars.find({$or: [{"barName":data.barName}, {"type":data.type}, {"district":data.district}]});
-    const bars = await Bars.find({$or: [{barName:validatedData.barName}, {type:validatedData.type}, {district:validatedData.district}]});
+    const bars = await Bars.find({
+      $or: [
+        { barName: validatedData.barName },
+        { type: validatedData.type },
+        { district: validatedData.district },
+      ],
+    });
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
@@ -26,11 +31,11 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const allBars = await Bars.find({});
-    console.log('On server', allBars)
+    console.log("On server", allBars);
     res.json(allBars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
   }
-})
+});
 
 module.exports = router;
