@@ -17,8 +17,6 @@ router.post("/", async (req, res) => {
   
   if (validatedData.barName) {
     try {
-      //const bars = await Bars.find({ address: { $regex: "M6" } }); //reg expression just in case
-      //const bars = await Bars.find({$or: [{"barName":data.barName}, {"type":data.type}, {"district":data.district}]});
       const bars = await Bars.find({
         $or: [
           //{ barName: `/^${validatedData.type}$/i`},
