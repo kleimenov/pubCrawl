@@ -22,7 +22,9 @@ router.post("/", async (req, res) => {
         { district: validatedData.district },
       ],
     });
+    
     console.log('data come from server', bars)
+
     res.json(bars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
