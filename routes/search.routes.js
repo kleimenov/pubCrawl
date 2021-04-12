@@ -26,6 +26,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const allBars = await Bars.find({});
+    console.log('On server', allBars)
     res.json(allBars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });

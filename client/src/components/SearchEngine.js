@@ -46,6 +46,10 @@ export const SearchEngine = () => {
   const getAllHandler = async () => {
     try {
       console.log("hello get all");
+      const allData = await request("/api/search");
+      console.log(allData)
+      setResponse(allData);
+      isSearched();
     } catch (e) {}
   };
 
