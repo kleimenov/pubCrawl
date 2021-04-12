@@ -19,15 +19,11 @@ router.post("/", async (req, res) => {
     try {
       const bars = await Bars.find({
         $or: [
-          //{ barName: `/^${validatedData.type}$/i`},
-
-          //{ barName: validatedData.barName },
           { barName: regex },
           { type: validatedData.type },
           { district: validatedData.district },
         ],
       });
-      //console.log('data come from server', bars)
       res.json(bars);
     } catch (e) {
       res.status(500).json({ message: "Something goes wrong!" });
