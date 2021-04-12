@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-
+//get all data from server (query select all)
 router.get("/", async (req, res) => {
   try {
     const allBars = await Bars.find({});
