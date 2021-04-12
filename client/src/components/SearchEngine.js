@@ -45,7 +45,6 @@ export const SearchEngine = () => {
 
   const getAllHandler = async () => {
     try {
-      
       const allData = await request("/api/search");
       setResponse(allData);
       isSearched();
