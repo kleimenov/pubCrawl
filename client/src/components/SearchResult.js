@@ -2,13 +2,12 @@ import React from "react";
 import { useHttp } from "../hooks/http.hook";
 import { Button } from "react-bootstrap";
 
-
 export const SearchResult = ({ data, isSearched }) => {
   const { loading } = useHttp();
 
   const returnHandler = () => {
     isSearched();
-  }; 
+  };
 
   return (
     <div>
