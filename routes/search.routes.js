@@ -28,15 +28,13 @@ router.post("/", async (req, res) => {
     } catch (e) {
       res.status(500).json({ message: "Something goes wrong!" });
     }
-  } else  {
-    
-    try {
-      const bars = await Bars.find({
-        $or: [{ type: validatedData.type }, { district: validatedData.district }],
-      });
-      res.json(bars);
-    } catch (e) {}
   }
+  try {
+    const bars = await Bars.find({
+      $or: [{ type: validatedData.type }, { district: validatedData.district }],
+    });
+    res.json(bars);
+  } catch (e) {}
 });
 
 //get all data from server (query select all)
