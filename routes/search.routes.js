@@ -7,7 +7,7 @@ const router = Router();
 router.post("/", async (req, res) => {
   //check data that came from client side
   const data = req.body;
-  console.log(data)
+  console.log(data);
   //apply validation function, transform data to lowercase, currently I won't use this function,
   //anyway I will store it here just in case.
   const validatedData = handlers.queryValidator(data);
@@ -17,14 +17,13 @@ router.post("/", async (req, res) => {
     //const bars = await Bars.find({$or: [{"barName":data.barName}, {"type":data.type}, {"district":data.district}]});
     const bars = await Bars.find({
       $or: [
-        
         { barName: validatedData.barName },
 
         { type: validatedData.type },
         { district: validatedData.district },
       ],
     });
-    
+
     //console.log('data come from server', bars)
 
     res.json(bars);
