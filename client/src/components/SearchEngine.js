@@ -43,6 +43,12 @@ export const SearchEngine = () => {
     }
   };
 
+  const getAllHandler = async () => {
+    try {
+      console.log("hello get all");
+    } catch (e) {}
+  };
+
   if (!search) {
     return (
       <div>
@@ -87,7 +93,11 @@ export const SearchEngine = () => {
             >
               Search
             </button>
-            <button className="btn btn-secondary text-white py-1 px-2">
+            <button
+              className="btn btn-secondary text-white py-1 px-2"
+              onClick={getAllHandler}
+              disabled={loading}
+            >
               All Bars
             </button>
           </div>
