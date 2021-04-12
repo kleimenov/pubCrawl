@@ -47,7 +47,6 @@ export const SearchEngine = () => {
     try {
       console.log("hello get all");
       const allData = await request("/api/search");
-      
       setResponse(allData);
       isSearched();
     } catch (e) {}
