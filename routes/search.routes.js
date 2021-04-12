@@ -11,6 +11,8 @@ router.post("/", async (req, res) => {
   //apply validation function, transform data to lowercase, currently I won't use this function,
   //anyway I will store it here just in case.
   const validatedData = handlers.queryValidator(data);
+
+  //execute ReqExp inbox function, to create regular expression, it helps check is there some parts or whole word of bars name in query
   let regex = new RegExp(validatedData.barName, "i");
   console.log(regex);
   console.log(validatedData.barName);
