@@ -5,7 +5,7 @@ const router = Router();
 
 //get data from search engine, and post it on server and get result (specific query)
 router.post("/", async (req, res) => {
-  //get data from client side
+  //check data that came from client side
   const data = req.body;
 
   //apply validation function, transform data to lowercase, currently I won't use this function,
