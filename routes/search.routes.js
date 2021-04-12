@@ -25,7 +25,7 @@ router.post("/", async (req, res) => {
       ],
     });
     
-    console.log('data come from server', bars)
+    //console.log('data come from server', bars)
 
     res.json(bars);
   } catch (e) {
