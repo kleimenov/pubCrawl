@@ -14,7 +14,6 @@ router.post("/", async (req, res) => {
 
   //execute ReqExp inbox function, to create regular expression, it helps check is there some parts or whole word of bars name in query
   let regex = new RegExp(validatedData.barName, "i");
-  
   console.log(validatedData.barName);
 
   if (validatedData.barName) {
