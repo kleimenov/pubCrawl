@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const UserBarsList = require("../models/UserBarsList");
 const router = Router();
 
 /*
