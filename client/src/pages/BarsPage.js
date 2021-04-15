@@ -8,20 +8,20 @@ export const BarsPage = () => {
   const auth = useContext(AuthContext);
 
   const userId = auth.userId;
-  
 
   useEffect(() => {
     getUsersBars();
-  }, []); 
- 
-  
+  }, []);
+
   const getUsersBars = async () => {
     try {
-      const allData = await request("/api/barslist/userbars", "POST", {userId});
+      const allData = await request("/api/barslist/userbars", "POST", {
+        userId,
+      });
       setResponse(allData);
     } catch (e) {}
+  };
 
-}
 
   return (
     <div>
