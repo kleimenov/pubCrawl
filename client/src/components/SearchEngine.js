@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { useSearch } from "../hooks/search.hook";
+
 import { SearchResult } from "../components/SearchResult";
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
+  
   const [response, setResponse] = useState([]);
   const { search, isSearched } = useSearch();
+
+
 
   const [form, setForm] = useState({
     barName: "",
