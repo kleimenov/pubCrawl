@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useHttp } from "../hooks/http.hook";
-import {} from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 export const BarsPage = () => {
   const { loading, error, request } = useHttp();
