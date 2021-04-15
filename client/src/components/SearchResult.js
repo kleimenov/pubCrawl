@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { Button } from "react-bootstrap";
 import { AuthContext } from "../context/AuthContext";
@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 export const SearchResult = ({ data, isSearched }) => {
   const { loading } = useHttp();
   const auth = useContext(AuthContext);
-  
+
   const returnHandler = () => {
     isSearched();
   };
