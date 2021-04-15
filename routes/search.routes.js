@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
       const bars = await Bars.find({
         $or: [
           { barName: regex },
-          { type: validatedData.type },
+          { type: validatedData.type }, 
           { district: validatedData.district },
         ],
       });
@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
 });
 
 //get all data from server (query select all)
-router.get("/", async (req, res) => {
+router.get("/", async (req, res) => { 
   try {
     const allBars = await Bars.find({});
     res.json(allBars);

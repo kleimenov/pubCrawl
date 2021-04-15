@@ -11,8 +11,6 @@ export const SearchResult = ({ data, isSearched }) => {
     isSearched();
   };
 
-  console.log('search result', auth.userId)
-
   return (
     <div>
       <h4 className="text-secondary text-right my-4">
