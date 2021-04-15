@@ -4,6 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 
 export const BarsPage = () => {
   const { loading, error, request } = useHttp();
+  const auth = useContext(AuthContext);
 
   return (
     <div>
