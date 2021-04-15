@@ -19,7 +19,7 @@ router.post("/userbars", async (req, res) => {
       userBarsData.push(bar[0])
       //userBarsData = [...userBarsData, bar]
     }
-    console.log(userBarsData)
+    
     res.json(userBars);
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
