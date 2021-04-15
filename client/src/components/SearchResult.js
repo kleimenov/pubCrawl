@@ -9,7 +9,7 @@ export const SearchResult = ({ data, isSearched }) => {
     isSearched();
   };
 
-  return ( 
+  return (
     <div>
       <h4 className="text-secondary text-right my-4">
         This is result of your search:
