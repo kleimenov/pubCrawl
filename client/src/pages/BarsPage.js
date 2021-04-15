@@ -6,6 +6,7 @@ export const BarsPage = () => {
   const { loading, error, request } = useHttp();
   const auth = useContext(AuthContext);
 
+  
   return (
     <div>
       <h3>BarsPage cool</h3>

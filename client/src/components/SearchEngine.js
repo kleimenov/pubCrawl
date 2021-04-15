@@ -10,7 +10,6 @@ export const SearchEngine = () => {
   const [response, setResponse] = useState([]);
   const { search, isSearched } = useSearch();
 
-  console.log('search eng', auth.userId)
 
 
   const [form, setForm] = useState({
