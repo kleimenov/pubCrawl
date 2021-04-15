@@ -2,7 +2,6 @@ const express = require("express");
 const config = require("config");
 const mongoose = require("mongoose");
 const app = express();
-
 //app.use(cors());
 
 app.use(express.json({ extended: true })); 
