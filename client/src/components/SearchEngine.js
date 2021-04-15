@@ -1,15 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { useSearch } from "../hooks/search.hook";
-
+import { AuthContext } from "../context/AuthContext";
 import { SearchResult } from "../components/SearchResult";
 
 export const SearchEngine = () => {
   const { loading, error, request } = useHttp();
-  
+  const auth = useContext(AuthContext);
   const [response, setResponse] = useState([]);
   const { search, isSearched } = useSearch();
 
+  console.log(auth.userId)
 
 
   const [form, setForm] = useState({
