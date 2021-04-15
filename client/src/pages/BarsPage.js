@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useHttp } from "../hooks/http.hook";
+import {} from "../context/AuthContext";
 
 export const BarsPage = () => {
+  const { loading, error, request } = useHttp();
+
   return (
     <div>
-      <h3>BarsPage</h3>
+      <h3>BarsPage cool</h3>
     </div>
   );
 };
