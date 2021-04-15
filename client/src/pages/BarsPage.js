@@ -21,7 +21,8 @@ export const BarsPage = () => {
       setResponse(allData);
     } catch (e) {}
   };
-
+ 
+  console.log(response)
 
   return (
     <div>
