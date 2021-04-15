@@ -5,6 +5,6 @@ const router = Router();
 /*
 all bars list logic will be here
 */
-
+router.post('')
 
 module.exports = router;

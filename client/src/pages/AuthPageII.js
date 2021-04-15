@@ -55,7 +55,7 @@ export const AuthPageII = () => {
             onClick={loginHandler}
             disabled={loading}
           >
-            Login
+            Login 
           </button>
           <div className="text-secondary">
             Don't have an account?{" "}

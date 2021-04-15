@@ -16,7 +16,7 @@ const PORT = config.get("PORT") || 3001;
 
 //function start our server and connect us with db
 const start = async () => {
-  try {
+  try { 
     await mongoose.connect(config.get("mongoUri"), {
       useNewUrlParser: true,
       useUnifiedTopology: true,

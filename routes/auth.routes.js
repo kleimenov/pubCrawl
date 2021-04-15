@@ -15,7 +15,7 @@ router.post(
     check("email", "Incorrect email").isEmail(),
     check("password", "Password min length should be 6 symbols").isLength({
       min: 6,
-    }),
+    }), 
   ],
   async (req, res) => {
     try {
