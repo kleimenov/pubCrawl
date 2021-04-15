@@ -12,10 +12,8 @@ router.post("/userbars", async (req, res) => {
   const userBarsData = []
   try {
     const userBars = await User.find(data);
-    //console.log(userBars[0].barsList);
     for (let item of userBars[0].barsList) {
       const barId = { _id: item }
-      //const barId = { _id: `${item}`}
       const bar = await Bars.find(barId);
       //console.log(bar[0])
       userBarsData.push(bar[0])
