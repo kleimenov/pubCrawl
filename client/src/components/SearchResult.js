@@ -22,7 +22,9 @@ export const SearchResult = ({ data, isSearched }) => {
                 {item.barName} / {item.type} / {item.district}
               </h5>
               <Button
-                onClick={()=> {console.log("clicked")}}
+                onClick={() => {
+                  console.log("clicked");
+                }}
                 className="btn-primary p-0 px-1 py-0 ml-1"
                 type="submit"
                 disabled={loading}
