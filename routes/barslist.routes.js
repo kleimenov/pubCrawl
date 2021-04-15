@@ -5,6 +5,12 @@ const router = Router();
 /*
 all bars list logic will be here
 */
-router.post('')
+router.post("/barslist", async (req, res) => {
+  try {
+
+  } catch (e) {
+    res.status(500).json({ message: "Something goes wrong!" });
+  }
+});
 
 module.exports = router;
