@@ -37,7 +37,7 @@ export const BarsPage = () => {
                 <ul>
                   {
                     Object.keys(item.operation_hours).map((key) => (
-                      <li>
+                      <li className="h6">
                         {key} : {item.operation_hours[key]}
                       </li>
                     ))
