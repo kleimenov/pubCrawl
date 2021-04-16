@@ -27,7 +27,7 @@ export const BarsPage = () => {
 
   return (
     <div>
-      <h3>BarsPage cool</h3>
+      <h3 >BarsPage cool</h3>
       <ul className="list-unstyled">
         {response.map((item) => (
           <li className="my-2" key={item._id}>
