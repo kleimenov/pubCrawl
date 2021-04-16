@@ -35,8 +35,8 @@ export const BarsPage = () => {
               {item.barName}
               <div>
                 <ul className="mt-2">
-                  {Object.keys(item.operation_hours).map((key, i) => (
-                    <li className="h6" key={i}>
+                  {Object.keys(item.operation_hours).map((key, index) => (
+                    <li className="h6" key={index}>
                       {key} : {item.operation_hours[key]}
                     </li>
                   ))}
