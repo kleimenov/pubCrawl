@@ -49,4 +49,4 @@ export const BarsPage = () => {
     </div>
   );
 };
-//{item.operation_hours}
+
