@@ -28,7 +28,7 @@ export const BarsPage = () => {
   return (
     <div>
       <h3>BarsPage cool</h3>
-      <ul>
+      <ul className="list-unstyled">
        {response.map(item=> (
         <li>{item.barName}</li>
        ))}
