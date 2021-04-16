@@ -34,7 +34,16 @@ export const BarsPage = () => {
             <h5 className="text-secondary ml-2 pt-2">
               {item.barName}
               <div>
-              
+                <ul>
+                  {
+                    Object.keys(item.operation_hours).map((key) => (
+                      <li>
+                        {key} : {item.operation_hours[key]}
+                      </li>
+                    ))
+                    
+                  }
+                </ul>
               </div>
             </h5>
           </li>
