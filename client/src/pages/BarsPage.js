@@ -22,16 +22,18 @@ export const BarsPage = () => {
       setResponse(allData);
     } catch (e) {}
   };
- 
-  console.log(response)
+
+  console.log(response);
 
   return (
     <div>
       <h3>BarsPage cool</h3>
       <ul className="list-unstyled">
-       {response.map(item=> (
-        <li>{item.barName}</li>
-       ))}
+        {response.map((item) => (
+          <li className="my-2" key={item._id}>
+            {item.barName}
+          </li>
+        ))}
       </ul>
     </div>
   );
