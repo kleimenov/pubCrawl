@@ -34,7 +34,7 @@ export const BarsPage = () => {
             <h5 className="text-secondary ml-2 pt-2">
               {item.barName}
               <div>
-              {item.operation_hours}
+              
               </div>
             </h5>
           </li>
@@ -43,3 +43,4 @@ export const BarsPage = () => {
     </div>
   );
 };
+//{item.operation_hours}
