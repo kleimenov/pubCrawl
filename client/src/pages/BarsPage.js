@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
-import { link } from "fs";
+
 
 export const BarsPage = () => {
   const { loading, error, request } = useHttp();
