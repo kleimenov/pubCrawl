@@ -32,7 +32,7 @@ export const BarsPage = () => {
         {response.map((item) => (
           <li className="my-2" key={item._id}>
             <h5 className="text-secondary ml-2 pt-2">
-              {item.barName}
+              {item.barName} / {item.district}
               <div>
                 <ul className="mt-2">
                   {Object.keys(item.operation_hours).map((key, index) => (
