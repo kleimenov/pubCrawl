@@ -23,7 +23,7 @@ export const BarsPage = () => {
     } catch (e) {}
   };
 
-  //console.log(response);
+  console.log(response);
 
   return (
     <div>
