@@ -33,15 +33,7 @@ export const BarsPage = () => {
           <li className="my-2" key={item._id}>
             <h5 className="text-secondary ml-2 pt-2">
               {item.barName} / {item.district}
-              <div>
-                <ul className="mt-2">
-                  {Object.keys(item.operation_hours).map((key, index) => (
-                    <li className="h6" key={index}>
-                      {key} : {item.operation_hours[key]}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
             </h5>
           </li>
         ))}
