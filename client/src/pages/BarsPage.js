@@ -15,15 +15,17 @@ export const BarsPage = () => {
 
   useEffect(() => {
     getUsersBars();
-    setRemove(null)
+    setRemove(null);
   }, [removeId]);
 
   const getUsersBars = async () => {
     if (removeId) {
       try {
-        const newData = await request("/api/remove/remove", "POST", {removeId});
+        const newData = await request("/api/remove/remove", "POST", {
+          removeId,
+        });
         //setResponse(newData);
-        console.log(newData)
+        console.log(newData);
       } catch (e) {}
     } else {
       try {
@@ -33,7 +35,6 @@ export const BarsPage = () => {
         setResponse(allData);
       } catch (e) {}
     }
-    
 
     // try {
     //       const allData = await request("/api/barslist/userbars", "POST", {
