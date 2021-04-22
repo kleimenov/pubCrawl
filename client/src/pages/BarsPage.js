@@ -36,12 +36,6 @@ export const BarsPage = () => {
       } catch (e) {}
     }
 
-    // try {
-    //       const allData = await request("/api/barslist/userbars", "POST", {
-    //         userId,
-    //       });
-    //       setResponse(allData);
-    //     } catch (e) {}
   };
 
   return (
