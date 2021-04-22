@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
+import {OperationHours} from "../components/OperationHours"
 
 
 export const BarsPage = () => {
@@ -29,12 +30,12 @@ export const BarsPage = () => {
     <div>
       <h3 className="text-secondary">BarsPage cool</h3>
       <ul className="list-unstyled">
-        {response.map((item) => (
+        {response.map((item, index) => (
           <li className="my-2" key={item._id}>
             <h5 className="text-secondary ml-2 pt-2">
               {item.barName} / {item.district}
-              
             </h5>
+              <OperationHours key={index} item={item.operation_hours}/>
           </li>
         ))}
       </ul>
