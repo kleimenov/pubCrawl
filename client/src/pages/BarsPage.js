@@ -23,6 +23,7 @@ export const BarsPage = () => {
       try {
         const newData = await request("/api/remove/remove", "POST", {
           removeId,
+          userId
         });
         //setResponse(newData);
         console.log(newData);
