@@ -1,8 +1,14 @@
 import React from "react";
 
-export const RemoveButton = () => {
+export const RemoveButton = (barId) => {
+
+    const clickHandler = () => {
+        console.log(barId.barId)
+    }
   return (
-    <button className="btn btn-secondary text-white px-1 mr-5">
+    <button 
+    onClick={clickHandler}
+    className="btn btn-secondary text-white px-1 mr-5">
       Remove bar
     </button>
   );
