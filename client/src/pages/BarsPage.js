@@ -35,7 +35,7 @@ export const BarsPage = () => {
               <h5 className="text-secondary ml-2 pt-2">
                 {item.barName} / {item.district}
               </h5>
-              <button className="btn btn-secondary text-white ml-3 px-1">
+              <button className="btn btn-secondary text-white px-1 mr-5">
                 Remove bar
               </button>
             </div>
