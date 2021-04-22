@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
-import {OperationHours} from "../components/OperationHours"
-
+import { OperationHours } from "../components/OperationHours";
 
 export const BarsPage = () => {
   const { loading, error, request } = useHttp();
@@ -35,7 +34,8 @@ export const BarsPage = () => {
             <h5 className="text-secondary ml-2 pt-2">
               {item.barName} / {item.district}
             </h5>
-              <OperationHours key={index} item={item.operation_hours}/>
+            <button>Remove bar</button>
+            <OperationHours key={index} item={item.operation_hours} />
           </li>
         ))}
       </ul>
