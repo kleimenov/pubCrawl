@@ -35,7 +35,7 @@ export const BarsPage = () => {
               <h5 className="text-secondary ml-2 pt-2">
                 {item.barName} / {item.district}
               </h5>
-              <RemoveButton />
+              <RemoveButton barId = {item._id} />
             </div>
             <OperationHours key={index} item={item.operation_hours} />
           </li>
