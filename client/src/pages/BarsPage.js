@@ -7,17 +7,25 @@ import { RemoveButton } from "../components/RemoveButton";
 export const BarsPage = () => {
   const { loading, error, request } = useHttp();
   const [response, setResponse] = useState([]);
-  const [removeId, setRemove] = useState(null)
+  const [removeId, setRemove] = useState(null);
   const auth = useContext(AuthContext);
 
   const userId = auth.userId;
-  console.log('state old', removeId)
+  console.log("state old", removeId);
+
   useEffect(() => {
     getUsersBars();
-  }, []);
+    setRemove(null)
+  }, [removeId]);
 
   const getUsersBars = async () => {
-    if(!removeId) {
+    if (removeId) {
+      try {
+        const newData = await request("/api/remove/remove", "POST", {removeId});
+        //setResponse(newData);
+        console.log(newData)
+      } catch (e) {}
+    } else {
       try {
         const allData = await request("/api/barslist/userbars", "POST", {
           userId,
@@ -25,10 +33,14 @@ export const BarsPage = () => {
         setResponse(allData);
       } catch (e) {}
     }
-    try {
-      const allData = await request("")
-      setRemove(null)
-    } catch (e) {}
+    
+
+    // try {
+    //       const allData = await request("/api/barslist/userbars", "POST", {
+    //         userId,
+    //       });
+    //       setResponse(allData);
+    //     } catch (e) {}
   };
 
   return (
@@ -41,7 +53,7 @@ export const BarsPage = () => {
               <h5 className="text-secondary ml-2 pt-2">
                 {item.barName} / {item.district}
               </h5>
-              <RemoveButton barId={item._id} setRemove={setRemove}/>
+              <RemoveButton barId={item._id} setRemove={setRemove} />
             </div>
             <OperationHours key={index} item={item.operation_hours} />
           </li>
