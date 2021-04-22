@@ -35,7 +35,6 @@ export const BarsPage = () => {
         setResponse(allData);
       } catch (e) {}
     }
-
   };
 
   return (
