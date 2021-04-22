@@ -35,7 +35,7 @@ export const BarsPage = () => {
           userId,
         });
         setResponse(allData);
-        console.log('fuck you')
+        console.log('invoked update of list of bars')
       } catch (e) {}
     }
   };
