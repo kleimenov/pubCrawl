@@ -5,7 +5,7 @@ export const OperationHours = (item) => {
     <div>
       <ul className="mt-2">
         {Object.keys(item.item).map((key, index) => (
-          <li className="h6" key={index}>
+          <li className="h6 text-secondary" key={index}>
             {key} : {item.item[key]}
           </li>
         ))}
