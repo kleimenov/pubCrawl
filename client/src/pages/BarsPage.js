@@ -31,7 +31,7 @@ export const BarsPage = () => {
       <ul className="list-unstyled">
         {response.map((item, index) => (
           <li className="my-2" key={item._id}>
-            <div className="d-flex">
+            <div className="d-flex justify-content-between align-items-center">
               <h5 className="text-secondary ml-2 pt-2">
                 {item.barName} / {item.district}
               </h5>
