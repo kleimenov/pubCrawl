@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useHttp } from "../hooks/http.hook";
 import { AuthContext } from "../context/AuthContext";
 import { OperationHours } from "../components/OperationHours";
-import { RemoveButton} from "../components/RemoveButton";
+import { RemoveButton } from "../components/RemoveButton";
 
 export const BarsPage = () => {
   const { loading, error, request } = useHttp();
@@ -24,7 +24,6 @@ export const BarsPage = () => {
     } catch (e) {}
   };
 
-
   return (
     <div>
       <h3 className="text-secondary">BarsPage cool</h3>
@@ -35,7 +34,7 @@ export const BarsPage = () => {
               <h5 className="text-secondary ml-2 pt-2">
                 {item.barName} / {item.district}
               </h5>
-              <RemoveButton barId = {item._id} />
+              <RemoveButton barId={item._id} />
             </div>
             <OperationHours key={index} item={item.operation_hours} />
           </li>
