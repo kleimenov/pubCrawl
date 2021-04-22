@@ -12,7 +12,7 @@ router.post("/remove", async (req, res) => {
 
   const filter = {_id: req.body.userId};
   const deleteId = {barsList: req.body.removeId};
-  //console.log(filter, deleteId)
+  console.log(filter, deleteId)
  
   //User.update({_id: user._id}, {$unset: {field: 1 }}, callback);
   try {
@@ -28,7 +28,8 @@ router.post("/remove", async (req, res) => {
     //          response.update({ $pull: {barsList: req.body.removeId } }) }
         
     // })
-    const testTest = await User.findById(filter)
+    //const testTest = await User.findByIdAndUpdate(filter, {$pull: {barsList: {$in: req.body.removeId }}})
+    const testTest = await User.updateOne( {_id: req.body.userId}, { $pull: {barsList: [req.body.removeId] } }, { safe: true, upsert: true } )
     console.log(testTest)
     res.json("love you");
   } catch (e) {
