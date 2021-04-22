@@ -31,10 +31,12 @@ export const BarsPage = () => {
       <ul className="list-unstyled">
         {response.map((item, index) => (
           <li className="my-2" key={item._id}>
-            <h5 className="text-secondary ml-2 pt-2">
-              {item.barName} / {item.district}
-            </h5>
-            <button>Remove bar</button>
+            <div className="d-flex">
+              <h5 className="text-secondary ml-2 pt-2">
+                {item.barName} / {item.district}
+              </h5>
+              <button className="btn btn-secondary text-white ml-3 px-1">Remove bar</button>
+            </div>
             <OperationHours key={index} item={item.operation_hours} />
           </li>
         ))}
