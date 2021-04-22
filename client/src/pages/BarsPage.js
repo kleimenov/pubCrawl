@@ -15,7 +15,7 @@ export const BarsPage = () => {
 
   useEffect(() => {
     getUsersBars();
-    setRemove(null);
+    //setRemove(null);
   }, [removeId]);
 
   const getUsersBars = async () => {
@@ -26,6 +26,7 @@ export const BarsPage = () => {
           userId
         });
         //setResponse(newData);
+        setRemove(null);
         console.log(newData);
       } catch (e) {}
     } else {
@@ -34,6 +35,7 @@ export const BarsPage = () => {
           userId,
         });
         setResponse(allData);
+        console.log('fuck you')
       } catch (e) {}
     }
   };
