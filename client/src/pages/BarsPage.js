@@ -38,7 +38,7 @@ export const BarsPage = () => {
           userId,
         });
         setResponse(allData);
-        console.log("invoked update of list of bars");
+        
       } catch (e) {}
     }
   };
