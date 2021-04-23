@@ -13,17 +13,21 @@ export const BarsPage = () => {
   const userId = auth.userId;
   console.log("state old", removeId);
 
-  useEffect(() => {
-    getUsersBars();
-    //setRemove(null);
-  }, [removeId]);
+  useEffect(
+    () => {
+      getUsersBars();
+      //setRemove(null);
+    },
+    [removeId],
+    response
+  );
 
   const getUsersBars = async () => {
     if (removeId) {
       try {
         const newData = await request("/api/remove/remove", "POST", {
           removeId,
-          userId
+          userId,
         });
         //setResponse(newData);
         setRemove(null);
@@ -35,7 +39,7 @@ export const BarsPage = () => {
           userId,
         });
         setResponse(allData);
-        console.log('invoked update of list of bars')
+        console.log("invoked update of list of bars");
       } catch (e) {}
     }
   };
