@@ -5,7 +5,9 @@ const schema = new Schema({
   email: { type: String, require: true, unique: true },
   password: { type: String, require: true },
   phone_number: { type: String },
-  barsList: [{ type: Types.ObjectId, ref: "Bars" }],
+  //barsList: [{ type: Types.ObjectId, ref: "Bars" }],
+  barsList: [
+     { id: {type: String }}],
   date: { type: Date, default: Date.now },
 });
 
