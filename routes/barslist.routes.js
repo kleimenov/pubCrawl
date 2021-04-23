@@ -14,12 +14,12 @@ router.post("/userbars", async (req, res) => {
     const userBars = await User.find(data);
 
     for (let item of userBars[0].barsList) {
-      //console.log(item.id)
+     
       const barId = { _id: item.id };
       const bar = await Bars.find(barId);
       userBarsData.push(bar[0]);
     }
-    //console.log(userBarsData)
+    
     res.json(userBarsData);
     // for (let item of userBars[0].barsList) {
     //   const barId = { _id: item };
