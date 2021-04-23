@@ -30,7 +30,8 @@ router.post("/remove", async (req, res) => {
     // })
     //const testTest = await User.findByIdAndUpdate(filter, {$pull: {barsList: {$in: req.body.removeId }}})
     //const testTest = await User.updateOne( {_id: req.body.userId}, { $pull: {barsList: [req.body.removeId] } }, { safe: true, upsert: true } )
-    const testTest = await User.updateOne({_id: req.body.userId}, { $pop: { barsList: 1 } })
+    //const testTest = await User.updateOne({_id: req.body.userId}, { $pop: { barsList: 1 } })
+    const testTest = await User.updateOne({_id: req.body.userId}, { $pull: {barsList: [req.body.removeId] }})
     console.log(testTest)
     res.json("love you");
   } catch (e) {
