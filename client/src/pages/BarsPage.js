@@ -11,7 +11,7 @@ export const BarsPage = () => {
   const auth = useContext(AuthContext);
 
   const userId = auth.userId;
-  console.log("state old", removeId);
+  
 
   useEffect(
     () => {
