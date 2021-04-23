@@ -1,9 +1,7 @@
 import React from "react";
 
 export const RemoveButton = ({ barId, setRemove }) => {
-  
   const clickHandler = () => {
-    
     setRemove(barId);
   };
   return (
