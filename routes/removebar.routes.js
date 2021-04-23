@@ -8,9 +8,6 @@ all bars list logic will be here
 
 router.post("/remove", async (req, res) => {
   
-  const filter = {_id: req.body.userId};
-  const deleteId = {barsList: req.body.removeId};
-  
   try {
     const testTest = await User.updateOne({_id: req.body.userId}, { $pull: {barsList: { id: req.body.removeId }}  })
     console.log(testTest)
