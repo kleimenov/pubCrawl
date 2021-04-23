@@ -38,7 +38,6 @@ export const BarsPage = () => {
           userId,
         });
         setResponse(allData);
-        
       } catch (e) {}
     }
   };
