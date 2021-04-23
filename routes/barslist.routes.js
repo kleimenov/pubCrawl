@@ -21,13 +21,7 @@ router.post("/userbars", async (req, res) => {
     }
     
     res.json(userBarsData);
-    // for (let item of userBars[0].barsList) {
-    //   const barId = { _id: item };
-    //   const bar = await Bars.find(barId);
-    //   userBarsData.push(bar[0]);
-    //   //userBarsData = [...userBarsData, bar]
-    // }
-    // res.json(userBarsData);
+    
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
   }
