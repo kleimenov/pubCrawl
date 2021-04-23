@@ -7,9 +7,7 @@ all bars list logic will be here
 */
 
 router.post("/remove", async (req, res) => {
-  //console.log(req.body.removeId)
-  //console.log(req.body)
-
+  
   const filter = {_id: req.body.userId};
   const deleteId = {barsList: req.body.removeId};
   //console.log(filter, deleteId)
