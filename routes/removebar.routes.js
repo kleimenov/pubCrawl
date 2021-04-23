@@ -10,9 +10,7 @@ router.post("/remove", async (req, res) => {
   
   const filter = {_id: req.body.userId};
   const deleteId = {barsList: req.body.removeId};
-  //console.log(filter, deleteId)
- 
-  //User.update({_id: user._id}, {$unset: {field: 1 }}, callback);
+  
   try {
     //const testO = await User.deleteOne( { _id: req.body.userId }, { $pull: {barsList: req.body.removeId } } );
     //User.updateOne({ _id: req.body.userId }, { $pull: {barsList: [req.body.removeId] }})
