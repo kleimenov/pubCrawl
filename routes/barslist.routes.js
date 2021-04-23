@@ -9,19 +9,17 @@ all bars list logic will be here
 
 router.post("/userbars", async (req, res) => {
   const data = { _id: req.body.userId };
-  const userBarsData = []; 
+  const userBarsData = [];
   try {
     const userBars = await User.find(data);
 
     for (let item of userBars[0].barsList) {
-     
       const barId = { _id: item.id };
       const bar = await Bars.find(barId);
       userBarsData.push(bar[0]);
     }
-    
+
     res.json(userBarsData);
-    
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
   }
