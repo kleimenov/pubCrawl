@@ -12,7 +12,7 @@ router.post("/userbars", async (req, res) => {
   const userBarsData = []; 
   try {
     const userBars = await User.find(data);
-    //console.log(userBars[0])
+
     for (let item of userBars[0].barsList) {
       //console.log(item.id)
       const barId = { _id: item.id };
