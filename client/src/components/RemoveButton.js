@@ -3,7 +3,7 @@ import React from "react";
 export const RemoveButton = ({ barId, setRemove }) => {
   
   const clickHandler = () => {
-    console.log("button clicked", barId);
+    
     setRemove(barId);
   };
   return (
