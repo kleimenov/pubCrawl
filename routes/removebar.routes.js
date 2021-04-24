@@ -10,7 +10,7 @@ router.post("/remove", async (req, res) => {
   
   try {
     const testTest = await User.updateOne({_id: req.body.userId}, { $pull: {barsList: { id: req.body.removeId }}  })
-    console.log(testTest)
+    //console.log(testTest)
     res.json("love you");
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
