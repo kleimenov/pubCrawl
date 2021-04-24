@@ -15,7 +15,7 @@ export const BarsPage = () => {
   useEffect(
     () => {
       getUsersBars();
-      //setRemove(null);
+      setRemove(null);
     },
     [removeId],
     response
