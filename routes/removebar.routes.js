@@ -9,8 +9,8 @@ all bars list logic will be here
 router.post("/remove", async (req, res) => {
   
   try {
-    const testTest = await User.updateOne({_id: req.body.userId}, { $pull: {barsList: { id: req.body.removeId }}  })
-    //console.log(testTest)
+    const removeBar = await User.updateOne({_id: req.body.userId}, { $pull: {barsList: { id: req.body.removeId }}  })
+    //console.log(removeBar)
     res.json("love you");
   } catch (e) {
     res.status(500).json({ message: "Something goes wrong!" });
