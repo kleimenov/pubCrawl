@@ -2,9 +2,6 @@ const { Router } = require("express");
 const User = require("../models/User");
 const router = Router();
 
-/*
-all bars list logic will be here
-*/
 
 router.post("/remove", async (req, res) => {
   
