@@ -55,9 +55,9 @@ router.post(
   }
 );
 
-//second auth route is:  /api/auth/login
+//second auth route is:  /api/auth/login 
 router.post(
-  "/login",
+  "/login", 
   [
     /*check("email", "Input correct email").normalizeEmail().isEmail(),*/
     check("email", "Input correct email").isEmail(),
