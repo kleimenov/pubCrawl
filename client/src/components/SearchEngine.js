@@ -9,7 +9,6 @@ export const SearchEngine = () => {
   const auth = useContext(AuthContext);
   const [response, setResponse] = useState([]);
   const { search, isSearched } = useSearch();
-  
   const [form, setForm] = useState({
     barName: "",
     type: "",
