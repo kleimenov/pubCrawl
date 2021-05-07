@@ -6,7 +6,6 @@ import { AuthContext } from "../context/AuthContext";
 export const SearchResult = ({ data, isSearched }) => {
   const { loading } = useHttp();
   const auth = useContext(AuthContext);
-
   const returnHandler = () => {
     isSearched();
   };
