@@ -10,8 +10,6 @@ export const SearchEngine = () => {
   const [response, setResponse] = useState([]);
   const { search, isSearched } = useSearch();
 
-
-
   const [form, setForm] = useState({
     barName: "",
     type: "",
