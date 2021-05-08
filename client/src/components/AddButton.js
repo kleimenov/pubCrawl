@@ -2,11 +2,15 @@ import React from "react";
 
 export const AddButton = () => {
   return (
-    <button
+    <Button
       onClick={() => {
-        console.log("add button was clicked");
+        console.log("clicked");
       }}
-      className="btn btn-secondary text-white px-1 mr-5"
-    ></button>
+      className="btn-primary p-0 px-1 py-0 ml-1"
+      type="submit"
+      disabled={loading}
+    >
+      +bar
+    </Button>
   );
 };
