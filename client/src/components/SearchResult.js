@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useHttp } from "../hooks/http.hook";
-import { Button } from "react-bootstrap";
+import { AddButton } from "./AddButton"
 import { AuthContext } from "../context/AuthContext";
 
 export const SearchResult = ({ data, isSearched }) => {
@@ -22,16 +22,7 @@ export const SearchResult = ({ data, isSearched }) => {
               <h5 className="text-secondary ml-2 pt-2">
                 {item.barName} / {item.type} / {item.district}
               </h5>
-              <Button
-                onClick={() => {
-                  console.log("clicked");
-                }}
-                className="btn-primary p-0 px-1 py-0 ml-1"
-                type="submit"
-                disabled={loading}
-              >
-                +bar
-              </Button>
+              <AddButton />
             </div>
           </li>
         ))}
