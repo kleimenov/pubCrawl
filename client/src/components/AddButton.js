@@ -9,7 +9,7 @@ export const AddButton = () => {
       onClick={() => {
         console.log("clicked");
       }}
-      className="btn-primary p-0 px-1 py-0 ml-1"
+      className="btn-secondary p-0 px-1 py-0 ml-1"
       type="submit"
       disabled={loading}
     >
