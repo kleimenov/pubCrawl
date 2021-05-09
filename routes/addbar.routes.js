@@ -7,7 +7,8 @@ route.post("/add", async (req, res) => {
   try {
     const barList = new UserBarList({
       /*
-      here I will add bar's data that I want to add in DB 
+      here I will add bar's data that I want to add in DB
+      collection UserBarsList
       */
     });
     await barList.save();
