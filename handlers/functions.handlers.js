@@ -45,7 +45,6 @@ export const handlersFunctions = () => {
     }
     return newArr.join(" ");
   };
-
   return {toCapitalize};
 };
 */
