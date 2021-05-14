@@ -31,7 +31,6 @@ module.exports = {
 
 /*
 export const handlersFunctions = () => {
-
   const toCapitalize = (string) => {
     let splitStr = string.split(" ");
     let newArr = [];
