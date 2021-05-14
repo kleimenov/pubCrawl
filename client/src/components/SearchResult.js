@@ -9,7 +9,6 @@ export const SearchResult = ({ data, isSearched }) => {
   const returnHandler = () => {
     isSearched();
   };
-
   return (
     <div>
       <h4 className="text-secondary text-right my-4">
